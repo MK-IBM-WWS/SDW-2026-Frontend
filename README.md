@@ -1,11 +1,11 @@
-# Индексы в БД — React-приложение
+# Индексы в БД
 
-Основа — приложенный фронтенд ЛР6: React + TypeScript + React-Bootstrap + Redux Toolkit/thunk + Axios с кодогенерацией. Компоненты функциональные. Бэкенд передаётся отдельной папкой `SDW-2026-Backend`.
+React + TypeScript + React-Bootstrap + Redux Toolkit/thunk + Axios с кодогенерацией.
 
-## Запуск на Fedora
+## Запуск
 
-Нужен Node.js 22.12+ либо 24+; установить из Fedora: `sudo dnf install nodejs`.
-Сначала запустить контейнеры, миграцию, генератор и Go API по README соседнего бэкенда.
+Нужен Node.js 22.12+ либо 24+.
+Сначала запустить контейнеры, миграцию, генератор и Go API
 Затем из этой папки:
 
 ```bash
@@ -61,5 +61,3 @@ API_SCHEMA_URL=http://localhost:8080/swagger/doc.json npm run generate-api
 Метаданные ленты находятся в `feed`: `redis_key`, `batch_id`, `batch_start`, `batch_size`, `position`, `session_id`.
 
 Результат `npm run build` находится в `dist`. Для разработки и демонстрации используйте `npm run dev`: в нём настроен прокси к Go/MinIO. При отдельной публикации `dist` потребуется прокси в веб-сервере.
-
-Старые материалы ЛР6 в `docs` оставлены как материалы предыдущей работы; порядок показа новой лабораторной будет оформлен отдельно.
