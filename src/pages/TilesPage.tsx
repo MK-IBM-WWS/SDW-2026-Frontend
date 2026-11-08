@@ -1,36 +1,34 @@
-import { useEffect, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
-import type { Tariff } from '../types/tariff';
-import { getPriceStep, PRICE_STEPS } from '../modules/priceFilter';
+import { useEffect } from 'react';
 import { PriceFilter } from '../components/PriceFilter';
 import { TariffCard } from '../components/TariffCard';
 import { usePageTitle } from '../hooks/usePageTitle';
+import { useTariffDispatch, useTariffSelector } from '../store';
+import { getTariffs, setTariffPriceStep, applyTariffPriceFilter } from '../store/tariffsSlice';
 
-export function TilesPage({ tariffs }: { tariffs: readonly Tariff[] }) {
-  const [params, setParams] = useSearchParams();
-  const appliedStep = getPriceStep(params.get('priceLimit'));
-  const [selectedStep, setSelectedStep] = useState(appliedStep);
-  const limit = PRICE_STEPS[appliedStep].value;
-  const visibleTariffs = tariffs.filter((tariff) => limit === '' || tariff.price_per_month <= Number(limit));
+export function TilesPage() {
+  const dispatch = useTariffDispatch();
+  const { items, selectedPriceStep, appliedPriceStep, listSource, listReady } = useTariffSelector((state) => state.tariffs);
+  const authenticated = useTariffSelector((state) => state.tariffUser.isAuthenticated);
+  const busy = useTariffSelector((state) => state.tariffInterface.pending > 0);
+  const login = useTariffSelector((state) => state.tariffUser.login);
   usePageTitle('Тарифы облачного хостинга');
-
-  // Кнопки браузера «Назад/Вперёд» восстанавливают и слайдер, и список.
-  useEffect(() => { setSelectedStep(appliedStep); }, [appliedStep]);
-
+  useEffect(() => {
+    if (!listReady) void dispatch(getTariffs());
+  }, [dispatch, listReady, appliedPriceStep, authenticated]);
   const applyFilter = () => {
-    const value = PRICE_STEPS[selectedStep].value;
-    setParams(value ? { priceLimit: value } : {});
+    if (selectedPriceStep === appliedPriceStep) void dispatch(getTariffs());
+    else dispatch(applyTariffPriceFilter());
   };
-
-  return (
-    <div className="page page--pattern">
-      <header className="page-header"><h1 className="page-header__title">Тарифы</h1></header>
-      <PriceFilter step={selectedStep} onStepChange={setSelectedStep} onApply={applyFilter} />
-      <main className="tiles" aria-label="Список тарифов">
-        <p className="visually-hidden" role="status">Найдено тарифов: {visibleTariffs.length}</p>
-        {visibleTariffs.map((tariff) => <TariffCard key={tariff.tariff_id} tariff={tariff} />)}
-        {!visibleTariffs.length && <p className="empty-state">По выбранной цене тарифы не найдены.</p>}
-      </main>
-    </div>
-  );
+  return <div className="page page--pattern">
+    <header className="page-header"><h1 className="page-header__title">Тарифы</h1>
+      {authenticated && <small>{login}</small>}</header>
+    <PriceFilter step={selectedPriceStep} onStepChange={(value) => dispatch(setTariffPriceStep(value))}
+      onApply={applyFilter} disabled={busy} />
+    {listSource === 'mock' && <p className="tariff-offline" role="status">Сервер недоступен. Демонстрационные тарифы.</p>}
+    <main className="tiles" aria-label="Список тарифов">
+      <p className="visually-hidden" role="status">Найдено тарифов: {items.length}</p>
+      {items.map((tariff) => <TariffCard key={tariff.tariff_id} tariff={tariff} />)}
+      {!busy && !items.length && <p className="empty-state">Тарифы не найдены.</p>}
+    </main>
+  </div>;
 }

@@ -1,0 +1,69 @@
+<%
+const { apiConfig, routes, utils, config } = it;
+const { info, servers, externalDocs } = apiConfig;
+const { _, require, formatDescription, escapeJSDocContent } = utils;
+
+const server = (servers && servers[0]) || { url: "" };
+
+const descriptionLines = _.compact([
+  `@title ${escapeJSDocContent(info.title || "No title")}`,
+  info.version && `@version ${escapeJSDocContent(info.version)}`,
+  info.license && `@license ${_.compact([
+    info.license.name && escapeJSDocContent(info.license.name),
+    info.license.url && `(${escapeJSDocContent(info.license.url)})`,
+  ]).join(" ")}`,
+  info.termsOfService && `@termsOfService ${escapeJSDocContent(info.termsOfService)}`,
+  server.url && `@baseUrl ${escapeJSDocContent(server.url)}`,
+  externalDocs.url && `@externalDocs ${escapeJSDocContent(externalDocs.url)}`,
+  info.contact && `@contact ${_.compact([
+    info.contact.name && escapeJSDocContent(info.contact.name),
+    info.contact.email && `<${escapeJSDocContent(info.contact.email)}>`,
+    info.contact.url && `(${escapeJSDocContent(info.contact.url)})`,
+  ]).join(" ")}`,
+  info.description && " ",
+  info.description && _.replace(formatDescription(info.description), /\n/g, "\n * "),
+]);
+
+%>
+
+<% if (config.httpClientType === config.constants.HTTP_CLIENT.AXIOS) { %> import type { AxiosRequestConfig, AxiosResponse } from "axios"; <% } %>
+
+<% if (descriptionLines.length) { %>
+/**
+<% descriptionLines.forEach((descriptionLine) => { %>
+* <%~ descriptionLine %>
+
+<% }) %>
+*/
+<% } %>
+export class <%~ config.apiClassName %><SecurityDataType extends unknown><% if (!config.singleHttpClient) { %> extends HttpClient<SecurityDataType> <% } %> {
+
+<% if(config.singleHttpClient) { %>
+  http: HttpClient<SecurityDataType>;
+
+  constructor (http: HttpClient<SecurityDataType>) {
+    this.http = http;
+  }
+<% } %>
+
+
+<% if (routes.outOfModule) { %>
+  <% for (const route of routes.outOfModule) { %>
+
+  <%~ includeFile('./procedure-call.ejs', { ...it, route }) %>
+
+  <% } %>
+<% } %>
+
+<% if (routes.combined) { %>
+  <% for (const { routes: combinedRoutes = [], moduleName } of routes.combined) { %>
+  <%~ moduleName %> = {
+  <% for (const route of combinedRoutes) { %>
+
+  <%~ includeFile('./procedure-call.ejs', { ...it, route }) %>
+
+  <% } %>
+  }
+  <% } %>
+<% } %>
+}

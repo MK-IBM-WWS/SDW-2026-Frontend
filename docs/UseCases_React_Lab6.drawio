@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram id="tariffs-react-lab6" name="Прецеденты React ЛР6">
+    <mxGraphModel dx="1200" dy="1000" grid="0" page="1" pageWidth="1169" pageHeight="1100">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="boundary" value="Интерфейс облачных тарифов (React)" style="html=0;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=16;verticalAlign=top;spacingTop=14;" vertex="1" parent="1">
+          <mxGeometry x="285" y="35" width="560" height="930" as="geometry" />
+        </mxCell>
+        <mxCell id="guest" value="Гость" style="html=0;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=16;shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="65" y="160" width="85" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="user" value="Пользователь" style="html=0;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=16;shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="65" y="630" width="85" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="tiles" value="Просмотреть плитку тарифов" style="html=0;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=16;ellipse;" vertex="1" parent="1">
+          <mxGeometry x="380" y="100" width="355" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="filter" value="Отфильтровать тарифы по цене" style="html=0;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=16;ellipse;" vertex="1" parent="1">
+          <mxGeometry x="380" y="185" width="355" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="feed" value="Просмотреть ленту тарифов" style="html=0;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=16;ellipse;" vertex="1" parent="1">
+          <mxGeometry x="380" y="270" width="355" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="login" value="Войти" style="html=0;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=16;ellipse;" vertex="1" parent="1">
+          <mxGeometry x="380" y="355" width="355" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="draft" value="Открыть свой черновик" style="html=0;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=16;ellipse;" vertex="1" parent="1">
+          <mxGeometry x="380" y="440" width="355" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="create" value="Создать тариф с фото и видео" style="html=0;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=16;ellipse;" vertex="1" parent="1">
+          <mxGeometry x="380" y="525" width="355" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="publish" value="Опубликовать свой тариф" style="html=0;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=16;ellipse;" vertex="1" parent="1">
+          <mxGeometry x="380" y="610" width="355" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="delete" value="Удалить свой тариф / черновик" style="html=0;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=16;ellipse;" vertex="1" parent="1">
+          <mxGeometry x="380" y="695" width="355" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="like" value="Поставить или отменить лайк" style="html=0;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=16;ellipse;" vertex="1" parent="1">
+          <mxGeometry x="380" y="780" width="355" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="logout" value="Выйти" style="html=0;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=16;ellipse;" vertex="1" parent="1">
+          <mxGeometry x="380" y="865" width="355" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" style="endArrow=none;html=0;strokeColor=#000000;" edge="1" parent="1" source="guest" target="tiles">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" style="endArrow=none;html=0;strokeColor=#000000;" edge="1" parent="1" source="guest" target="filter">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" style="endArrow=none;html=0;strokeColor=#000000;" edge="1" parent="1" source="guest" target="feed">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" style="endArrow=none;html=0;strokeColor=#000000;" edge="1" parent="1" source="guest" target="login">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" style="endArrow=none;html=0;strokeColor=#000000;" edge="1" parent="1" source="user" target="tiles">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" style="endArrow=none;html=0;strokeColor=#000000;" edge="1" parent="1" source="user" target="filter">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge7" style="endArrow=none;html=0;strokeColor=#000000;" edge="1" parent="1" source="user" target="feed">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge8" style="endArrow=none;html=0;strokeColor=#000000;" edge="1" parent="1" source="user" target="draft">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge9" style="endArrow=none;html=0;strokeColor=#000000;" edge="1" parent="1" source="user" target="create">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge10" style="endArrow=none;html=0;strokeColor=#000000;" edge="1" parent="1" source="user" target="publish">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge11" style="endArrow=none;html=0;strokeColor=#000000;" edge="1" parent="1" source="user" target="delete">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge12" style="endArrow=none;html=0;strokeColor=#000000;" edge="1" parent="1" source="user" target="like">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge13" style="endArrow=none;html=0;strokeColor=#000000;" edge="1" parent="1" source="user" target="logout">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

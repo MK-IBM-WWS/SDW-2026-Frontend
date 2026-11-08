@@ -99,7 +99,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .filter__submit.btn:hover, .draft__submit.btn:hover { color: #000; background: #4fc8d6; }
 
 .tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; padding: 0 22px calc(var(--tabbar-height) + 24px); }
-.tile.card { min-width: 0; overflow: hidden; color: #fff; background: rgba(0, 0, 0, .56); border: 2px solid var(--color-border); border-radius: 18px; transition: border-color .16s; }
+.tile.card { position: relative; min-width: 0; overflow: hidden; color: #fff; background: rgba(0, 0, 0, .56); border: 2px solid var(--color-border); border-radius: 18px; transition: border-color .16s; }
 .tile:has(a:hover), .tile:focus-within { border-color: var(--color-accent); }
 .tile__link { display: block; color: inherit; text-decoration: none; }
 .tile__link:hover { color: inherit; }
@@ -130,8 +130,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .feed__like-button.btn, .feed__like-button.btn:disabled { display: grid; place-items: center; width: 46px; height: 42px; padding: 0; border: 0; color: #fff; background: transparent; opacity: 1; }
 .feed__like-button .icon { width: 39px; height: 39px; }
 .feed__likes strong { font-size: 14px; line-height: 1.1; }
-.feed__next { display: grid; place-items: center; width: 42px; height: 42px; color: #fff; background: transparent; border: 2px solid #fff; border-radius: 10px; }
-.feed__next .icon { width: 25px; height: 25px; stroke-width: 3; }
+.feed__next.btn { display: grid; place-items: center; width: 42px; height: 42px; padding: 0; line-height: 1; color: #fff; background: transparent; border: 2px solid #fff; border-radius: 10px; }
+.feed__next .icon { display: block; width: 20px; height: 20px; stroke-width: 2.5; }
 .feed__next:hover { color: #000; background: var(--color-accent); border-color: var(--color-accent); }
 
 .draft { padding: 4px 24px calc(var(--tabbar-height) + 28px); }
@@ -140,7 +140,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .media-field__preview { position: relative; height: 160px; overflow: hidden; border: 2px solid var(--color-border); border-radius: 14px; }
 .media-field__preview:focus-within { border-color: var(--color-accent); }
 .media-field__preview img, .media-field__preview video { display: block; width: 100%; height: 100%; object-fit: cover; background: #000; }
-.draft__file.form-control { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+/* Всё превью — кликабельная область; отдельных видимых кнопок нет.
+   Скрытые input не накладываются поверх видео и вызываются только по клику пользователя. */
+.media-field__picker { display: block; width: 100%; height: 100%; margin: 0; padding: 0; border: 0; border-radius: inherit; background: #000; cursor: pointer; }
+.media-field__picker img, .media-field__picker video { pointer-events: none; }
+.media-field__picker:focus-visible { outline-offset: -4px; }
+.media-field__picker:disabled { cursor: wait; }
+.draft__file { display: none; }
 .draft__input.form-control { min-height: 43px; margin-bottom: 18px; padding: 9px 12px; color: #fff; background: rgba(0, 0, 0, .42); border: 2px solid var(--color-border); border-radius: 14px; }
 .draft__input.form-control:focus { border-color: var(--color-accent); box-shadow: none; }
 .draft__input::placeholder { color: #aaa; }
@@ -160,3 +166,17 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .draft { padding-left: 16px; padding-right: 16px; }
   .feed__title { font-size: 29px; }
 }
+
+/* ЛР6: состояние загрузки, авторизация и операции пользователя. */
+.tariff-loading { position: fixed; inset: 0; z-index: 2000; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; color: #fff; background: rgba(0,0,0,.7); cursor: progress; }
+.tariff-alert { position: fixed; z-index: 2100; top: 12px; left: 50%; transform: translateX(-50%); width: min(440px, calc(100% - 24px)); }
+.tariff-offline { margin: 0 22px 16px; padding: 10px; font-size: 13px; color: #fff; background: #273239; border-radius: 10px; }
+.tariff-offline--feed { position: absolute; z-index: 3; top: 12px; }
+.tariff-delete.btn { margin: 6px 10px 12px; font-size: 12px; }
+.draft > .tariff-delete { width: 100%; margin: 15px 0; }
+.tile__delete.btn { position: absolute; top: 12px; right: 12px; z-index: 2; display: grid; place-items: center; width: 26px; height: 26px; margin: 0; padding: 0; line-height: 1; color: #fff; background: rgba(0,0,0,.72); border: 1px solid rgba(255,255,255,.85); border-radius: 50%; }
+.tile__delete.btn:hover { color: #fff; background: #b62e43; border-color: #fff; }
+.tile__delete.btn:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.tile__delete .icon { display: block; width: 14px; height: 14px; stroke-width: 2.5; }
+.feed__like-button[aria-pressed="true"] .icon { fill: #e65776; stroke: #e65776; }
+.page-header small { color: #ddd; }

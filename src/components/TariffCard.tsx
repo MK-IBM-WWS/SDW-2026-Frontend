@@ -4,8 +4,14 @@ import type { Tariff } from '../types/tariff';
 import { formatNumber } from '../modules/priceFilter';
 import { Icon } from './Icon';
 import { TariffImage } from './TariffImage';
+import { Button } from 'react-bootstrap';
+import { useTariffDispatch, useTariffSelector } from '../store';
+import { deleteTariff } from '../store/tariffsSlice';
 
 export function TariffCard({ tariff }: { tariff: Tariff }) {
+  const dispatch = useTariffDispatch();
+  const authenticated = useTariffSelector((state) => state.tariffUser.isAuthenticated);
+  const busy = useTariffSelector((state) => state.tariffInterface.pending > 0);
   return (
     <Card as="article" className="tile">
       <Link className="tile__link" to={`/tariffs/feed?id=${tariff.tariff_id}`} aria-label={`Открыть тариф ${tariff.tariff_name}`}>
@@ -17,6 +23,9 @@ export function TariffCard({ tariff }: { tariff: Tariff }) {
           <span className="tile__open" aria-hidden="true">›</span>
         </Card.Body>
       </Link>
+      {authenticated && tariff.is_owner === 1 && <Button className="tile__delete"
+        disabled={busy} aria-label={`Удалить тариф ${tariff.tariff_name}`} title="Удалить тариф"
+        onClick={() => dispatch(deleteTariff(tariff.tariff_id))}><Icon name="close" /></Button>}
     </Card>
   );
 }

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import { Link, useSearchParams } from 'react-router-dom';
 import type { Tariff } from '../types/tariff';
@@ -6,8 +6,13 @@ import { Icon } from '../components/Icon';
 import { TariffVideo } from '../components/TariffVideo';
 import { formatNumber } from '../modules/priceFilter';
 import { usePageTitle } from '../hooks/usePageTitle';
+import { useTariffDispatch, useTariffSelector } from '../store';
+import { getTariffFeed, setTariffLike } from '../store/tariffsSlice';
 
-function FeedCard({ tariff, nextId }: { tariff: Tariff; nextId?: number }) {
+function FeedCard({ tariff, onNext }: { tariff: Tariff; onNext: () => void }) {
+  const dispatch = useTariffDispatch();
+  const authenticated = useTariffSelector((state) => state.tariffUser.isAuthenticated);
+  const busy = useTariffSelector((state) => state.tariffInterface.pending > 0);
   const [expanded, setExpanded] = useState(false);
   usePageTitle(tariff.tariff_name);
   const words = tariff.short_description.split(' ');
@@ -32,25 +37,33 @@ function FeedCard({ tariff, nextId }: { tariff: Tariff; nextId?: number }) {
           <strong className="feed__ram-value">{tariff.ram_gb} ГБ</strong>
         </div>
         <div className="feed__likes" aria-label={`Лайков: ${tariff.like_count}`}>
-          <Button className="feed__like-button" disabled aria-label="Лайки доступны после входа" title="Лайки доступны после входа"><Icon name="heart" /></Button>
+          <Button className="feed__like-button" disabled={!authenticated || busy} aria-pressed={tariff.is_liked === 1}
+            aria-label={tariff.is_liked === 1 ? 'Отменить лайк' : 'Поставить лайк'}
+            title={authenticated ? 'Лайк' : 'Сначала войдите'}
+            onClick={() => dispatch(setTariffLike({ id: tariff.tariff_id, value: tariff.is_liked === 1 ? 0 : 1 }))}><Icon name="heart" /></Button>
           <strong>{tariff.like_count}</strong>
         </div>
-        {nextId !== undefined && <Link className="feed__next" to={`/tariffs/feed?id=${nextId}`} aria-label="Следующий тариф"><Icon name="next" /></Link>}
+        <Button className="feed__next" disabled={busy} onClick={onNext} aria-label="Следующий тариф"><Icon name="next" /></Button>
       </aside>
     </main>
   );
 }
 
-export function FeedPage({ tariffs }: { tariffs: readonly Tariff[] }) {
-  const [params] = useSearchParams();
-  const id = params.get('id');
-  const index = id === null ? 0 : tariffs.findIndex((tariff) => String(tariff.tariff_id) === id);
-  const tariff = tariffs[index];
-
-  if (!tariff) {
-    return <main className="message-page"><h1>Тариф не найден</h1><Link to="/tariffs">Вернуться к плитке</Link></main>;
-  }
-  const nextId = tariffs.length > 1 ? tariffs[(index + 1) % tariffs.length].tariff_id : undefined;
-  // key сбрасывает раскрытое описание и состояние видео при смене карточки.
-  return <FeedCard key={tariff.tariff_id} tariff={tariff} nextId={nextId} />;
+export function FeedPage() {
+  const dispatch = useTariffDispatch();
+  const [params, setParams] = useSearchParams();
+  const idParam = params.get('id');
+  const next = params.get('next') === 'true';
+  const id = idParam === null ? undefined : Number(idParam);
+  const { feed, feedRequest, feedSource } = useTariffSelector((state) => state.tariffs);
+  const authenticated = useTariffSelector((state) => state.tariffUser.isAuthenticated);
+  usePageTitle('Лента тарифов');
+  useEffect(() => { void dispatch(getTariffFeed({ id, ...(next ? { next: true } : {}) })); }, [dispatch, id, next, authenticated]);
+  if (!feed) return <main className="message-page"><h1>{feedRequest ? 'Загрузка…' : 'Тариф не найден'}</h1>
+    <Link to="/tariffs">Вернуться к плитке</Link></main>;
+  return <>
+    {feedSource === 'mock' && <p className="tariff-offline tariff-offline--feed">Демонстрационные тарифы</p>}
+    <FeedCard key={feed.tariff_id} tariff={feed}
+      onNext={() => setParams({ id: String(feed.tariff_id), next: 'true' })} />
+  </>;
 }

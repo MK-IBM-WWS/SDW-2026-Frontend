@@ -7,9 +7,10 @@ interface Props {
   step: number;
   onStepChange: (value: number) => void;
   onApply: () => void;
+  disabled?: boolean;
 }
 
-export function PriceFilter({ step, onStepChange, onApply }: Props) {
+export function PriceFilter({ step, onStepChange, onApply, disabled }: Props) {
   return (
     <Form className="filter" onSubmit={(event) => { event.preventDefault(); onApply(); }}>
       <div className="filter__range-wrap">
@@ -18,8 +19,8 @@ export function PriceFilter({ step, onStepChange, onApply }: Props) {
         </Form.Label>
         <div className="filter__controls">
           <Form.Range className="filter__range" id="priceStep" min={0} max={PRICE_STEPS.length - 1} step={1}
-            value={step} aria-valuetext={PRICE_STEPS[step].label} onChange={(event) => onStepChange(Number(event.target.value))} />
-          <Button className="filter__submit" type="submit" aria-label="Применить фильтр по цене" title="Применить фильтр по цене">
+            value={step} disabled={disabled} aria-valuetext={PRICE_STEPS[step].label} onChange={(event) => onStepChange(Number(event.target.value))} />
+          <Button className="filter__submit" type="submit" disabled={disabled} aria-label="Применить фильтр по цене" title="Применить фильтр по цене">
             <Icon name="search" />
           </Button>
         </div>

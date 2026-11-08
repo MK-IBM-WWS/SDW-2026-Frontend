@@ -8,4 +8,6 @@ export interface Tariff {
   price_per_month: number;
   ram_gb: number;
   like_count: number;
+  is_owner?: number;
+  is_liked?: number;
 }

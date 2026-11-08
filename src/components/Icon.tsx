@@ -1,4 +1,4 @@
-type IconName = 'feed' | 'draft' | 'tiles' | 'login' | 'search' | 'heart' | 'next';
+type IconName = 'feed' | 'draft' | 'tiles' | 'login' | 'search' | 'heart' | 'next' | 'close';
 
 const paths: Record<IconName, string> = {
   feed: 'M3 11.2 12 3l9 8.2V21h-6v-6H9v6H3z',
@@ -8,6 +8,7 @@ const paths: Record<IconName, string> = {
   search: 'M15 15l6 6 M17 10a7 7 0 1 0-14 0 7 7 0 0 0 14 0',
   heart: 'M12 21S4 16.4 4 10.8A4.6 4.6 0 0 1 12 7.7a4.6 4.6 0 0 1 8 3.1C20 16.4 12 21 12 21Z',
   next: 'M5 12h14 M14 7l5 5-5 5',
+  close: 'M6 6l12 12 M18 6 6 18',
 };
 
 export function Icon({ name, className = '' }: { name: IconName; className?: string }) {
