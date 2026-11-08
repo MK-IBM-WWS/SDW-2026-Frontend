@@ -7,14 +7,14 @@ let activeTariffToken = '';
 export function setActiveTariffToken(token: string) { activeTariffToken = token; }
 export function getActiveTariffToken() { return activeTariffToken; }
 
-export const tariffsApi = new TariffsApi({ baseURL: '/api', timeout: 20000 });
+export const tariffsApi = new TariffsApi({ baseURL: '/api', timeout: 20000, withCredentials: true });
 tariffsApi.instance.interceptors.request.use((config) => {
   if (activeTariffToken) config.headers.set('Authorization', `Bearer ${activeTariffToken}`);
   return config;
 });
 
 // Авторизация и деавторизация — только прямой Axios, без thunk и кодогенерации.
-export const tariffUserHttp = axios.create({ baseURL: '/api', timeout: 20000 });
+export const tariffUserHttp = axios.create({ baseURL: '/api', timeout: 20000, withCredentials: true });
 
 export function tariffErrorMessage(error: unknown): string {
   if (axios.isAxiosError(error)) {

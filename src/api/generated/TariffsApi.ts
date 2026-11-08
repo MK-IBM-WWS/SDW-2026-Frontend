@@ -22,9 +22,19 @@ export enum AuthRole {
 }
 
 export interface DsUser {
+  /** Этим флагом управляет сервер или администратор БД; регистрация всегда ставит false. */
   is_moderator?: boolean;
   login?: string;
   user_id?: number;
+}
+
+export interface FeedMeta {
+  batch_id?: string;
+  batch_size?: number;
+  batch_start?: number;
+  position?: number;
+  redis_key?: string;
+  session_id?: string;
 }
 
 export interface HandlerCreatorResponse {
@@ -55,6 +65,12 @@ export interface HandlerErrorEnvelope {
   status?: string;
 }
 
+export interface HandlerFeedEnvelope {
+  data?: HandlerTariffResponse;
+  feed?: FeedMeta;
+  status?: string;
+}
+
 export interface HandlerLikeData {
   is_liked?: number;
   like_count?: number;
@@ -69,8 +85,13 @@ export interface HandlerLikeEnvelope {
 
 export interface HandlerListEnvelope {
   data?: HandlerListTariffResponse[];
+  index_enabled?: boolean;
+  limit?: number;
+  page?: number;
+  query_ms?: number;
   /** @example "success" */
   status?: string;
+  total?: number;
 }
 
 export interface HandlerListTariffResponse {
@@ -351,20 +372,33 @@ export class TariffsApi<
 > extends HttpClient<SecurityDataType> {
   tariffs = {
     /**
-     * @description Чтение доступно независимо от JWT. Валидный Authorization добавляет персональные is_owner/is_liked; неверный, истёкший или отозванный JWT трактуется как гостевой запрос.
+     * @description Сортировка price_per_month, tariff_id; query_ms — время COUNT и SELECT, без HTTP/MinIO. Максимум 100 карточек за запрос.
      *
      * @tags Тарифы
      * @name GetTariffs
-     * @summary Список опубликованных тарифов
+     * @summary Страница опубликованных тарифов с фильтром цены
      * @request GET:/tariffs
      */
     getTariffs: (
       query?: {
         /**
-         * Максимальная цена в рублях, целое >= 0
+         * Максимальная цена
          * @min 0
          */
         priceLimit?: number;
+        /**
+         * Страница
+         * @min 1
+         * @default 1
+         */
+        page?: number;
+        /**
+         * Размер страницы
+         * @min 1
+         * @max 100
+         * @default 10
+         */
+        limit?: number;
       },
       params: RequestParams = {},
     ) =>
@@ -431,25 +465,33 @@ export class TariffsApi<
       }),
 
     /**
-     * @description Чтение доступно независимо от JWT. Валидный Authorization добавляет персональные is_owner/is_liked; неверный, истёкший или отозванный JWT трактуется как гостевой запрос.
+     * @description При первом обращении создаёт 100 уникальных карточек. Сессия feed_session — HttpOnly cookie без авторизации, TTL Redis 24 часа. position — сквозной номер. init не продвигает ленту.
      *
      * @tags Тарифы
      * @name GetTariffFeed
-     * @summary Карточка ленты
+     * @summary Карточка случайной ленты из Redis
      * @request GET:/tariffs/feed
      */
     getTariffFeed: (
       query?: {
-        /** ID опубликованной карточки */
+        /**
+         * Порядковый номер в текущем наборе или сразу после него
+         * @min 1
+         */
+        position?: number;
+        /** Сформировать/восстановить ленту при старте приложения */
+        init?: boolean;
+        /**
+         * Открыть карточку из плитки
+         * @min 1
+         */
         id?: number;
-        /** Следующая карточка; требует id */
+        /** Следующая в Redis-порядке после id */
         next?: boolean;
-        /** Следующая после ID; отдельно от id и next */
-        after_id?: number;
       },
       params: RequestParams = {},
     ) =>
-      this.request<HandlerTariffEnvelope, HandlerErrorEnvelope>({
+      this.request<HandlerFeedEnvelope, HandlerErrorEnvelope>({
         path: `/tariffs/feed`,
         method: "GET",
         query: query,

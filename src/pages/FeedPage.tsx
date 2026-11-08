@@ -52,18 +52,23 @@ function FeedCard({ tariff, onNext }: { tariff: Tariff; onNext: () => void }) {
 export function FeedPage() {
   const dispatch = useTariffDispatch();
   const [params, setParams] = useSearchParams();
+  const positionParam = params.get('position');
+  const position = positionParam === null ? undefined : Number(positionParam);
   const idParam = params.get('id');
   const next = params.get('next') === 'true';
   const id = idParam === null ? undefined : Number(idParam);
-  const { feed, feedRequest, feedSource } = useTariffSelector((state) => state.tariffs);
+  const { feed, feedRequest, feedSource, feedMeta, feedReady } = useTariffSelector((state) => state.tariffs);
   const authenticated = useTariffSelector((state) => state.tariffUser.isAuthenticated);
   usePageTitle('Лента тарифов');
-  useEffect(() => { void dispatch(getTariffFeed({ id, ...(next ? { next: true } : {}) })); }, [dispatch, id, next, authenticated]);
+  useEffect(() => {
+    if (feedReady && (id !== undefined || position !== undefined))
+      void dispatch(getTariffFeed({ ...(position !== undefined ? { position } : { id, ...(next ? { next: true } : {}) }) }));
+  }, [dispatch, id, position, next, authenticated, feedReady]);
   if (!feed) return <main className="message-page"><h1>{feedRequest ? 'Загрузка…' : 'Тариф не найден'}</h1>
     <Link to="/tariffs">Вернуться к плитке</Link></main>;
   return <>
     {feedSource === 'mock' && <p className="tariff-offline tariff-offline--feed">Демонстрационные тарифы</p>}
     <FeedCard key={feed.tariff_id} tariff={feed}
-      onNext={() => setParams({ id: String(feed.tariff_id), next: 'true' })} />
+      onNext={() => setParams(feedMeta?.position ? { position: String(feedMeta.position + 1) } : { id: String(feed.tariff_id), next: 'true' })} />
   </>;
 }

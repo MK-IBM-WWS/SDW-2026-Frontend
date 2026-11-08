@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { getTariffFeed } from './store/tariffsSlice';
 import { Navigate, Route, Routes, Link } from 'react-router-dom';
 import { Alert, Spinner } from 'react-bootstrap';
 import { TabBar } from './components/TabBar';
@@ -12,6 +14,11 @@ export default function App() {
   const dispatch = useTariffDispatch();
   const { pending, error } = useTariffSelector((state) => state.tariffInterface);
   const authenticated = useTariffSelector((state) => state.tariffUser.isAuthenticated);
+  const { feedReady, feedRequest } = useTariffSelector((state) => state.tariffs);
+  // Лента формируется при загрузке любой страницы, в том числе плитки.
+  useEffect(() => {
+    if (!feedReady && !feedRequest) void dispatch(getTariffFeed({ init: true }));
+  }, [dispatch, feedReady, feedRequest, authenticated]);
   return (
     <div className="phone" aria-busy={pending > 0}>
       {error && <Alert className="tariff-alert" variant="danger" dismissible
