@@ -1,21 +1,6 @@
-# Облачные тарифы — лабораторная №6, версия 2.0.3
+# Облачные тарифы — лабораторная №6
 
 React + TypeScript + React Bootstrap + Redux Toolkit + Axios.
-Все React-компоненты функциональные. Собственный React Context не используется.
-Оформление и медиакомпоненты сохранены из ЛР5.
-
-## Замена файлов в черновике
-
-Нажмите непосредственно на фото или видео: откроется соответствующий диалог
-выбора файла. Так работает и новая форма, и существующий черновик сразу после
-«Далее» и при повторном открытии. Дополнительных видимых кнопок нет.
-Фото и видео выбираются раздельно; новые файлы сохраняются при публикации
-того же тарифа. Для сохранения нужна ранее выданная правка API
-SDW-2026-Backend-DraftMedia-Patch.zip; повторно изменять её не требуется.
-
-Чтобы запустить именно эту версию, остановите прежний Vite через Ctrl+C,
-распакуйте архив в новую папку и запускайте команды из SDW-2026-Frontend-v3.
-В терминале перед запуском Vite должна отображаться версия 2.0.3.
 
 ## Быстрый запуск
 
@@ -85,85 +70,3 @@ Redux DevTools поддерживается стандартной конфиг�
 Пока есть запросы, отображается Spinner, кнопки отключены, область интерфейса
 имеет inert. Моки используются только гостем при сетевом сбое или 502/503/504;
 настоящие ошибки валидации, авторизации и сервера показываются пользователю.
-
-## Проверка по обновлённому заданию ЛР6
-
-Уточнение: вход/выход — прямой Axios, затем обычные Redux actions, без thunk
-и без вызова сгенерированных методов авторизации. Это уже соблюдено:
-LoginPage.tsx вызывает tariffUserHttp.post и dispatch(tariffUserLoggedIn(...));
-TabBar.tsx — tariffUserHttp.post и dispatch(tariffUserLoggedOut()).
-
-| Требование | Где реализовано |
-| --- | --- |
-| Карточки из API, guest-only mock при недоступности | src/store/tariffsSlice.ts: getTariffs, getTariffFeed, canUseTariffMocks |
-| Фильтр в Redux и priceLimit в запросе | src/store/tariffsSlice.ts, src/pages/TilesPage.tsx |
-| Создание/публикация, лайки, удаление | src/pages/DraftPage.tsx, src/pages/FeedPage.tsx, src/components/TariffCard.tsx |
-| Вход/выход, ручной dispatch без thunk/кодогенерации | src/pages/LoginPage.tsx, src/components/TabBar.tsx, src/store/userSlice.ts |
-| Сброс фильтра при выходе | src/store/tariffsSlice.ts: tariffUserLoggedOut возвращает initialState |
-| F5: гостевой Redux при сохранённом JWT | src/store/userSlice.ts, src/api/index.ts, localStorage cloud_tariffs_jwt |
-| Axios + Swagger codegen + thunk для тарифов | scripts/generate-api.mjs, src/api/generated/TariffsApi.ts, src/store/tariffsSlice.ts |
-| Два proxy: API и S3 | vite.config.ts, src/api/index.ts: tariffMediaUrl |
-| Spinner и блокировка кнопок | src/App.tsx, src/store/interfaceSlice.ts |
-| Функциональные React-компоненты | src/pages/*.tsx, src/components/*.tsx |
-| Диаграмма прецедентов React | docs/UseCases_React_Lab6.drawio |
-
-На странице существующего черновика фото и видео выбираются так же, как при
-добавлении, независимо друг от друга. «Далее» создаёт черновик и сохраняет первые
-файлы. «Опубликовать» отправляет выбранные новые файлы и поля multipart-запросом
-PUT /tariffs/{id}/publication; ID тарифа сохраняется. Без выбора нового файла
-остаётся прежний. Предпросмотр локальный до публикации; после неё данные сохранены
-в БД/MinIO. Размеры проверяются в обеих стадиях: фото до 10 МБ, видео до 50 МБ.
-
-Для сохранения замены необходима небольшая правка сервиса из отдельного архива
-SDW-2026-Backend-DraftMedia-Patch.zip. Совместите его папку бэкенда со своей и
-перезапустите Go. Существующая база сохраняется; миграции не нужны. Полного
-бэкенда в архиве фронтенда нет. Старые JSON-запросы публикации остаются совместимы.
-Не заменяйте актуальную Swagger-схему схемой старого сервера при кодогенерации.
-
-Проверки описаны в docs/VALIDATION_DRAFT_MEDIA.md.
-
-## Что показать на защите — скриншоты 1–16
-
-Подробная инструкция с адресами, файлами и ожидаемыми результатами:
-[docs/SCREENSHOTS_LAB6.md](docs/SCREENSHOTS_LAB6.md).
-
-1. Плитка с mock при выключенном Go-сервисе.
-2. Лента с mock при выключенном Go-сервисе.
-3. Плитка с бэкендом; свой пользователь и крестики удаления.
-4. Лента с бэкендом; лайк и переход к следующему тарифу.
-5. Форма добавления/черновика с бэкендом; создание и публикация.
-6. Страница авторизации с работающим бэкендом.
-7. Изменение цены опубликованного тарифа в Adminer/PostgreSQL.
-8. Изменившаяся цена во фронтенде после обновления браузером.
-9. Вход → F5: гостевой Redux и сохранённый JWT в Application/localStorage.
-10. Тот же JWT в Postman/Insomnia: GET списка, is_owner=1 у своего тарифа.
-11. Все состояния Redux в коде и подключение трёх слайсов.
-12. Axios в сгенерированном клиенте и настройках кодогенерации.
-13. Вызов generated getTariffs внутри thunk с фильтром priceLimit.
-14. Вызовы generated createTariff/publishTariff внутри thunk; имена по теме.
-15. Network: AJAX-запрос /api/... через порт фронтенда и настройка proxy.
-16. Network: имя/URL изображения MinIO и запрос /s3/... через второй proxy.
-
-Диаграмма: [docs/UseCases_React_Lab6.drawio](docs/UseCases_React_Lab6.drawio).
-Прямые Axios-запросы входа/выхода с ручным dispatch следует также показать
-при разборе кода (подробности в пункте 12 инструкции).
-
-Контрольные вопросы: схема Redux Toolkit (reducer/store/middleware), Axios,
-localStorage, CORS/обратный proxy, BFF/GraphQL, Next.js/SSG, FSD.
-Наличие технологий в контрольных вопросах само по себе не требует их внедрения.
-PWA, HTTPS и Pages относятся к следующему этапу.
-
-## Автоматические проверки
-
-`tests/browser-contract.cjs` — браузерная проверка через HTTP-стенд по контракту
-ЛР4 и настоящий Vite proxy. Стенд не использует и не изменяет вашу БД.
-Для запуска теста освободите порты 3000, 8080 и 9000, затем выполните:
-
-```bash
-npm install --no-save --package-lock=false playwright
-npx playwright install chromium
-node tests/browser-contract.cjs
-```
-
-Эти команды нужны только для тестирования. Для обычного запуска достаточно
-`npm ci` и `npm run dev`.
