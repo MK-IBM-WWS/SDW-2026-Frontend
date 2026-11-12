@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { DEFAULT_IMAGE } from './TariffImage';
 
-const DEFAULT_VIDEO = '/media/example.mp4';
+import { publicAsset } from '../modules/environment';
+const DEFAULT_VIDEO = publicAsset('media/example.mp4');
 
 interface Props {
   src: string;

@@ -6,6 +6,8 @@ import type { Tariff } from '../types/tariff';
 import { tariffsApi, tariffErrorMessage, tariffMediaUrl } from '../api';
 import { getPublishedTariffs } from '../modules/mock';
 import { PRICE_STEPS } from '../modules/priceFilter';
+import { MOCK_ONLY } from '../modules/environment';
+import { readListPreferences } from './listPreferences';
 import { tariffUserLoggedIn, tariffUserLoggedOut } from './userSlice';
 
 export interface FeedMeta {
@@ -29,9 +31,9 @@ interface TariffsState {
   listReady: boolean;
 }
 const initialState: TariffsState = {
-  currentPage: 1, pageSize: 10, total: 0, totalPages: 0, queryMS: null, indexEnabled: null,
+  pageSize: 10, total: 0, totalPages: 0, queryMS: null, indexEnabled: null,
  feedMeta: null, feedReady: false,
- selectedPriceStep: 0, appliedPriceStep: 0, items: [], feed: null, draft: null,
+ ...readListPreferences(), items: [], feed: null, draft: null,
   listSource: 'api', feedSource: 'api', draftReady: false, listReady: false,
 };
 type ThunkConfig = { state: RootState; rejectValue: string };
@@ -61,6 +63,13 @@ function requireTariffUser(state: RootState) {
 export const getTariffs = tariffThunk('tariffs/getTariffs', async (_, { getState, rejectWithValue }) => {
   const { appliedPriceStep, currentPage, pageSize } = getState().tariffs;
   const price = PRICE_STEPS[appliedPriceStep].value;
+  const mockPage = () => {
+    const all = getPublishedTariffs().filter((t) => !price || t.price_per_month <= Number(price))
+      .sort((a, b) => a.price_per_month - b.price_per_month || a.tariff_id - b.tariff_id);
+    return { items: all.slice((currentPage - 1) * pageSize, currentPage * pageSize), total: all.length,
+      queryMS: null, indexEnabled: null, source: 'mock' as const };
+  };
+  if (MOCK_ONLY) return mockPage();
   try {
     const response = await tariffsApi.tariffs.getTariffs({
       ...(price ? { priceLimit: Number(price) } : {}), page: currentPage, limit: pageSize,
@@ -71,10 +80,7 @@ export const getTariffs = tariffThunk('tariffs/getTariffs', async (_, { getState
       queryMS: data.query_ms ?? null, indexEnabled: data.index_enabled ?? null, source: 'api' as const };
   } catch (error) {
     if (canUseTariffMocks(error, getState())) {
-      const all = getPublishedTariffs().filter((t) => !price || t.price_per_month <= Number(price))
-        .sort((a, b) => a.price_per_month - b.price_per_month || a.tariff_id - b.tariff_id);
-      return { items: all.slice((currentPage - 1) * pageSize, currentPage * pageSize), total: all.length,
-        queryMS: null, indexEnabled: null, source: 'mock' as const };
+      return mockPage();
     }
     return rejectWithValue(tariffErrorMessage(error));
   }
@@ -82,6 +88,14 @@ export const getTariffs = tariffThunk('tariffs/getTariffs', async (_, { getState
 
 export const getTariffFeed = tariffThunk('tariffs/getTariffFeed',
   async (query: { id?: number; next?: boolean; position?: number; init?: boolean }, { getState, rejectWithValue }) => {
+    const mockFeed = () => {
+      const items = getPublishedTariffs();
+      const index = query.position !== undefined ? (query.position - 1) % items.length :
+        query.id === undefined ? 0 : items.findIndex((t) => t.tariff_id === query.id);
+      const tariff = index < 0 ? null : items[query.next ? (index + 1) % items.length : index] ?? null;
+      return { tariff, meta: null, source: 'mock' as const };
+    };
+    if (MOCK_ONLY) return mockFeed();
     try {
       const response = await tariffsApi.tariffs.getTariffFeed(query);
       return { tariff: response.data.data ? normalizeTariff(response.data.data) : null,
@@ -91,11 +105,7 @@ export const getTariffFeed = tariffThunk('tariffs/getTariffFeed',
       const redisFailure = axios.isAxiosError(error) && error.response?.status === 503 &&
         error.response?.data?.message !== 'Бэкенд недоступен';
       if (!redisFailure && canUseTariffMocks(error, getState())) {
-        const items = getPublishedTariffs();
-        const index = query.position !== undefined ? (query.position - 1) % items.length :
-          query.id === undefined ? 0 : items.findIndex((t) => t.tariff_id === query.id);
-        const tariff = index < 0 ? null : items[query.next ? (index + 1) % items.length : index] ?? null;
-        return { tariff, meta: null, source: 'mock' as const };
+        return mockFeed();
       }
       return rejectWithValue(tariffErrorMessage(error));
     }

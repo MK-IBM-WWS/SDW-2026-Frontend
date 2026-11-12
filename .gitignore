@@ -1,0 +1,8 @@
+node_modules/
+dist/
+dist-pages/
+certs/
+.env
+.env.*
+!.env.proxy.example
+*.tsbuildinfo

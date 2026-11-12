@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { MOCK_ONLY } from '../modules/environment';
 import { TariffsApi } from './generated/TariffsApi';
 
 // Активный JWT хранится только в памяти. После F5 запросы снова гостевые.
@@ -9,12 +10,18 @@ export function getActiveTariffToken() { return activeTariffToken; }
 
 export const tariffsApi = new TariffsApi({ baseURL: '/api', timeout: 20000, withCredentials: true });
 tariffsApi.instance.interceptors.request.use((config) => {
+  if (MOCK_ONLY) return Promise.reject(new Error('На GitHub Pages доступны только демонстрационные тарифы'));
   if (activeTariffToken) config.headers.set('Authorization', `Bearer ${activeTariffToken}`);
   return config;
 });
 
 // Авторизация и деавторизация — только прямой Axios, без thunk и кодогенерации.
 export const tariffUserHttp = axios.create({ baseURL: '/api', timeout: 20000, withCredentials: true });
+
+tariffUserHttp.interceptors.request.use((config) => {
+  if (MOCK_ONLY) throw new Error('Для входа откройте приложение по HTTPS-адресу ноутбука');
+  return config;
+});
 
 export function tariffErrorMessage(error: unknown): string {
   if (axios.isAxiosError(error)) {
@@ -26,7 +33,7 @@ export function tariffErrorMessage(error: unknown): string {
 }
 
 // Подписанная ссылка сохраняет путь объекта и всю query-строку.
-// Vite направит /s3 к MinIO и выставит исходный Host, участвующий в подписи.
+// Node.js (HTTPS) или Vite (dev) направит /s3 к MinIO с исходным подписанным Host.
 export function tariffMediaUrl(value: string | undefined): string {
   if (!value || value.startsWith('/static/media/')) return '';
   if (/^https?:\/\//.test(value)) {

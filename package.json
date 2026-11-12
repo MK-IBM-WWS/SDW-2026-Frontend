@@ -1,7 +1,7 @@
 {
-  "name": "cloud-tariffs-lab6",
+  "name": "cloud-tariffs-lab7",
   "private": true,
-  "version": "2.0.3",
+  "version": "3.0.0",
   "type": "module",
   "engines": {
     "node": "^22.12.0 || >=24.0.0"
@@ -11,7 +11,11 @@
     "typecheck": "tsc -b",
     "build": "tsc -b && vite build",
     "preview": "vite preview --host 0.0.0.0 --port 3000 --strictPort",
-    "generate-api": "node scripts/generate-api.mjs"
+    "generate-api": "node scripts/generate-api.mjs",
+    "build:pages": "node scripts/build-pages.mjs",
+    "deploy": "node scripts/deploy-pages.mjs",
+    "start:https": "node --env-file-if-exists=.env.proxy scripts/https-server.mjs",
+    "certs": "node scripts/create-certs.mjs"
   },
   "dependencies": {
     "@reduxjs/toolkit": "2.13.0",
@@ -28,6 +32,7 @@
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "@vitejs/plugin-react": "^5.2.0",
+    "gh-pages": "^6.3.0",
     "swagger-typescript-api": "^13.13.0",
     "typescript": "~5.9.3",
     "vite": "^7.3.7"

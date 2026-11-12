@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { publicAsset } from '../modules/environment';
 import Button from 'react-bootstrap/Button';
 import { Link, useSearchParams } from 'react-router-dom';
 import type { Tariff } from '../types/tariff';
@@ -20,6 +21,7 @@ function FeedCard({ tariff, onNext }: { tariff: Tariff; onNext: () => void }) {
 
   return (
     <main className="feed" aria-label="Лента тарифов">
+      <Link className="feed__back" to="/tariffs">‹ К тарифам</Link>
       <TariffVideo key={tariff.tariff_id} className="feed__video" src={tariff.video_url} poster={tariff.image_url} autoPlay />
       <div className="feed__overlay" aria-hidden="true" />
       <section className="feed__content">
@@ -33,7 +35,7 @@ function FeedCard({ tariff, onNext }: { tariff: Tariff; onNext: () => void }) {
       </section>
       <aside className="feed__actions" aria-label="Параметры тарифа">
         <div className="feed__ram" aria-label={`Оперативная память: ${tariff.ram_gb} ГБ`}>
-          <span className="feed__ram-icon-frame" aria-hidden="true"><img className="feed__ram-icon" src="/images/ram.png" alt="" /></span>
+          <span className="feed__ram-icon-frame" aria-hidden="true"><img className="feed__ram-icon" src={publicAsset('images/ram.png')} alt="" /></span>
           <strong className="feed__ram-value">{tariff.ram_gb} ГБ</strong>
         </div>
         <div className="feed__likes" aria-label={`Лайков: ${tariff.like_count}`}>

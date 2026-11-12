@@ -1,4 +1,5 @@
 import type { Tariff } from '../types/tariff';
+import { publicAsset } from './environment';
 
 // Единственный источник данных карточек. Все URL ведут в public/ этого SPA.
 // Пустые поля специально оставлены для проверки стандартных изображения и видео.
@@ -8,8 +9,8 @@ export const TARIFFS_MOCK: readonly Tariff[] = [
     tariff_name: 'AWS EC2 Medium',
     short_description: 'Новый тариф для небольших веб-проектов и учебных серверов.',
     tariff_status: 'опубликован',
-    image_url: '/media/aws_ec2_medium.jpg',
-    video_url: '/media/aws_ec2_medium.mp4',
+    image_url: publicAsset('/media/aws_ec2_medium.jpg'),
+    video_url: publicAsset('/media/aws_ec2_medium.mp4'),
     price_per_month: 400,
     ram_gb: 4,
     like_count: 2,
@@ -30,7 +31,7 @@ export const TARIFFS_MOCK: readonly Tariff[] = [
     tariff_name: 'Azure AI Medium',
     short_description: 'Конфигурация для ресурсоёмкого API, аналитики и прикладных задач машинного обучения.',
     tariff_status: 'опубликован',
-    image_url: '/media/azure_ai_medium.jpg',
+    image_url: publicAsset('/media/azure_ai_medium.jpg'),
     video_url: '',
     price_per_month: 12000,
     ram_gb: 32,
@@ -41,7 +42,7 @@ export const TARIFFS_MOCK: readonly Tariff[] = [
     tariff_name: 'Google AI Max',
     short_description: 'Высокопроизводительный облачный экземпляр для интенсивных вычислений и больших нагрузок.',
     tariff_status: 'опубликован',
-    image_url: '/media/google_ai_max.jpg',
+    image_url: publicAsset('/media/google_ai_max.jpg'),
     video_url: '',
     price_per_month: 40000,
     ram_gb: 128,

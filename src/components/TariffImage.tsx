@@ -1,7 +1,8 @@
 import Card from 'react-bootstrap/Card';
 import { useState } from 'react';
 
-export const DEFAULT_IMAGE = '/media/example.jpg';
+import { publicAsset } from '../modules/environment';
+export const DEFAULT_IMAGE = publicAsset('media/example.jpg');
 
 export function TariffImage({ src, alt, className = '' }: { src: string; alt: string; className?: string }) {
   const [failedSource, setFailedSource] = useState<string | null>(null);

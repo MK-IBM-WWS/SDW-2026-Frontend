@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { MOCK_ONLY } from '../modules/environment';
 import { Pagination } from '../components/Pagination';
 import { PriceFilter } from '../components/PriceFilter';
 import { TariffCard } from '../components/TariffCard';
@@ -25,7 +26,7 @@ export function TilesPage() {
       {authenticated && <small>{login}</small>}</header>
     <PriceFilter step={selectedPriceStep} onStepChange={(value) => dispatch(setTariffPriceStep(value))}
       onApply={applyFilter} disabled={busy} />
-    {listSource === 'mock' && <p className="tariff-offline" role="status">Сервер недоступен. Демонстрационные тарифы.</p>}
+    {listSource === 'mock' && <p className="tariff-offline" role="status">{MOCK_ONLY ? 'Демонстрационные тарифы · GitHub Pages' : 'Сервер недоступен. Демонстрационные тарифы.'}</p>}
     <div className="tariff-stats" aria-live="polite">
       <span>Найдено: {total.toLocaleString('ru-RU')}</span>
     </div>
