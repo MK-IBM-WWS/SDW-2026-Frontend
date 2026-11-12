@@ -1,6 +1,6 @@
 // Сгенерировано при build. Кеш содержит только файлы этой сборки.
-const VERSION = "87d509776e10db9a";
-const FILES = ["assets/index-CHCe7s1L.js","assets/index-DmeMQrJN.css","assets/interface-background-DOnUA77F.png","icons/icon-192.png","icons/icon-512.png","icons/maskable-512.png","images/interface-background.png","images/ram.png","index.html","manifest.webmanifest","media/aws_ec2_medium.jpg","media/aws_ec2_medium.mp4","media/azure_ai_medium.jpg","media/example.jpg","media/example.mp4","media/google_ai_max.jpg"];
+const VERSION = "4d13ee987d5d7655";
+const FILES = ["assets/index-BSutNCM2.css","assets/index-CAXrIRvd.js","assets/interface-background-DOnUA77F.png","icons/icon-192.png","icons/icon-512.png","icons/maskable-512.png","images/interface-background.png","images/ram.png","index.html","manifest.webmanifest","media/aws_ec2_medium.jpg","media/aws_ec2_medium.mp4","media/azure_ai_medium.jpg","media/example.jpg","media/example.mp4","media/google_ai_max.jpg"];
 const BASE = new URL('./', self.location.href);
 const PREFIX = `tariffs-${BASE.pathname}-`;
 const CACHE = PREFIX + VERSION;
