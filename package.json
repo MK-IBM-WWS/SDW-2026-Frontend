@@ -1,7 +1,7 @@
 {
   "name": "cloud-tariffs-lab7",
   "private": true,
-  "version": "3.0.0",
+  "version": "3.0.3",
   "type": "module",
   "engines": {
     "node": "^22.12.0 || >=24.0.0"
@@ -15,7 +15,8 @@
     "build:pages": "node scripts/build-pages.mjs",
     "deploy": "node scripts/deploy-pages.mjs",
     "start:https": "node --env-file-if-exists=.env.proxy scripts/https-server.mjs",
-    "certs": "node scripts/create-certs.mjs"
+    "certs": "node scripts/create-certs.mjs",
+    "check:environment": "node scripts/check-environment.mjs"
   },
   "dependencies": {
     "@reduxjs/toolkit": "2.13.0",

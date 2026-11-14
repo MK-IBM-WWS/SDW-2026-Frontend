@@ -1,0 +1,29 @@
+/* Только GitHub Pages / mock-сборка. Без phone--pages эти правила не применяются.
+   Стили локального HTTPS-приложения остаются в styles.css без изменений. */
+.phone.phone--pages {
+  --phone-width: 100%;
+  width: 100%;
+  max-width: none;
+  box-shadow: none;
+}
+
+.phone--pages .page--pattern::before,
+.phone--pages .tabbar.navbar {
+  width: 100%;
+  max-width: none;
+}
+
+/* Убираем ограничение ленты 820px только на Pages: видео заполняет экран. */
+.phone--pages .feed {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+/* Узкий телефон — одна карточка; на остальных экранах действуют общие брейкпоинты. */
+@media (max-width: 479px) {
+  .phone--pages .tiles { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 767px) and (orientation: portrait) {
+  .phone--pages .tiles { grid-template-columns: minmax(0, 1fr); }
+}

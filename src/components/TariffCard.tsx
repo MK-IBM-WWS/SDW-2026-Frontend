@@ -20,7 +20,7 @@ export function TariffCard({ tariff }: { tariff: Tariff }) {
           <Card.Title as="h2" className="tile__name" title={tariff.tariff_name}>{tariff.tariff_name}</Card.Title>
           <Card.Text className="tile__price">{formatNumber(tariff.price_per_month)} ₽ / месяц</Card.Text>
           <span className="tile__likes" aria-label={`Лайков: ${tariff.like_count}`}><Icon name="heart" />{tariff.like_count}</span>
-          <span className="tile__open" aria-hidden="true">Подробнее ›</span>
+          <span className="tile__open" aria-hidden="true">›</span>
         </Card.Body>
       </Link>
       {authenticated && tariff.is_owner === 1 && <Button className="tile__delete"

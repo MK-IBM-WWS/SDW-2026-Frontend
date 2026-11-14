@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { publicAsset } from '../modules/environment';
+import { MOCK_ONLY, publicAsset } from '../modules/environment';
 import Button from 'react-bootstrap/Button';
 import { Link, useSearchParams } from 'react-router-dom';
 import type { Tariff } from '../types/tariff';
@@ -21,7 +21,6 @@ function FeedCard({ tariff, onNext }: { tariff: Tariff; onNext: () => void }) {
 
   return (
     <main className="feed" aria-label="Лента тарифов">
-      <Link className="feed__back" to="/tariffs">‹ К тарифам</Link>
       <TariffVideo key={tariff.tariff_id} className="feed__video" src={tariff.video_url} poster={tariff.image_url} autoPlay />
       <div className="feed__overlay" aria-hidden="true" />
       <section className="feed__content">
@@ -69,7 +68,7 @@ export function FeedPage() {
   if (!feed) return <main className="message-page"><h1>{feedRequest ? 'Загрузка…' : 'Тариф не найден'}</h1>
     <Link to="/tariffs">Вернуться к плитке</Link></main>;
   return <>
-    {feedSource === 'mock' && <p className="tariff-offline tariff-offline--feed">Демонстрационные тарифы</p>}
+    {!MOCK_ONLY && feedSource === 'mock' && <p className="tariff-offline tariff-offline--feed">Демонстрационные тарифы</p>}
     <FeedCard key={feed.tariff_id} tariff={feed}
       onNext={() => setParams(feedMeta?.position ? { position: String(feedMeta.position + 1) } : { id: String(feed.tariff_id), next: 'true' })} />
   </>;

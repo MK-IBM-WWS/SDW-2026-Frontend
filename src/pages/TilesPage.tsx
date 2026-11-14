@@ -26,7 +26,7 @@ export function TilesPage() {
       {authenticated && <small>{login}</small>}</header>
     <PriceFilter step={selectedPriceStep} onStepChange={(value) => dispatch(setTariffPriceStep(value))}
       onApply={applyFilter} disabled={busy} />
-    {listSource === 'mock' && <p className="tariff-offline" role="status">{MOCK_ONLY ? 'Демонстрационные тарифы · GitHub Pages' : 'Сервер недоступен. Демонстрационные тарифы.'}</p>}
+    {!MOCK_ONLY && listSource === 'mock' && <p className="tariff-offline" role="status">Сервер недоступен. Демонстрационные тарифы.</p>}
     <div className="tariff-stats" aria-live="polite">
       <span>Найдено: {total.toLocaleString('ru-RU')}</span>
     </div>

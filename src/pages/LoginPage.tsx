@@ -33,7 +33,7 @@ export function LoginPage() {
   };
   return <div className="page page--pattern">
     <header className="page-header"><h1 className="page-header__title">Вход</h1></header>
-    <main className="draft">{MOCK_ONLY && <p role="status">На GitHub Pages доступен просмотр mock-тарифов. Для входа откройте HTTPS-адрес ноутбука в локальной сети.</p>}<Form onSubmit={submit}>
+    <main className="draft"><Form onSubmit={submit}>
       <Form.Group controlId="tariff-login"><Form.Label>Логин</Form.Label>
         <Form.Control className="draft__input" required autoComplete="username" maxLength={50}
           value={login} onChange={(event) => setLogin(event.target.value)} /></Form.Group>

@@ -109,7 +109,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .tile__price.card-text { margin: 7px 0 11px; font-size: 12px; color: var(--color-muted); white-space: nowrap; }
 .tile__likes { display: inline-flex; align-items: center; gap: 5px; padding: 3px 8px; border: 1px solid var(--color-border); border-radius: 999px; font-size: 12px; }
 .tile__likes .icon { width: 14px; height: 14px; }
-.tile__open { position: absolute; right: 10px; bottom: 11px; display: grid; place-items: center; min-width: 95px; height: 31px; padding: 0 8px; border-radius: 12px; color: #06171a; background: var(--color-accent); font-size: 12px; line-height: 1; }
+.tile__open { position: absolute; right: 10px; bottom: 11px; display: grid; place-items: center; width: 31px; height: 31px; border-radius: 50%; color: #06171a; background: var(--color-accent); font-size: 26px; line-height: 1; }
 .empty-state { grid-column: 1 / -1; padding: 20px; margin: 30px 0; color: var(--color-muted); text-align: center; border: 1px solid var(--color-border); border-radius: 18px; }
 
 .feed { position: relative; height: calc(100dvh - var(--tabbar-height)); overflow: hidden; background: #000; }
@@ -195,7 +195,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
  --bs-pagination-hover-bg: #203d4b; --bs-pagination-hover-color: white;
 }
 
-/* ЛР7. Явные границы сетки: 1 / 2 / 3 / 4 колонки. На странице до 10 карточек. */
 @media (min-width: 480px) {
   .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
@@ -221,9 +220,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .draft-status { font-size: 10px; }
   .draft__input.form-control { font-size: 16px; }
 }
-.feed__back { position: absolute; top: max(16px, env(safe-area-inset-top)); left: 16px; z-index: 4;
-  padding: 10px 14px; color: white; background: rgba(0,0,0,.72); border-radius: 12px; text-decoration: none; }
-.feed__back:hover { color: var(--color-accent); }
 @media (max-height: 500px) and (orientation: landscape) {
   .feed__title { font-size: 25px; margin-bottom: 8px; }
   .feed__description { font-size: 13px; margin-bottom: 8px; }

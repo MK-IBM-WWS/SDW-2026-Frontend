@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { MOCK_ONLY } from './modules/environment';
 import { getTariffFeed } from './store/tariffsSlice';
 import { Navigate, Route, Routes, Link } from 'react-router-dom';
 import { Alert, Spinner } from 'react-bootstrap';
@@ -20,7 +21,7 @@ export default function App() {
     if (!feedReady && !feedRequest) void dispatch(getTariffFeed({ init: true }));
   }, [dispatch, feedReady, feedRequest, authenticated]);
   return (
-    <div className="phone" aria-busy={pending > 0}>
+    <div className={MOCK_ONLY ? 'phone phone--pages' : 'phone'} aria-busy={pending > 0}>
       {error && <Alert className="tariff-alert" variant="danger" dismissible
         onClose={() => dispatch(tariffInterfaceError(''))}>{error}</Alert>}
       <div inert={pending > 0}>

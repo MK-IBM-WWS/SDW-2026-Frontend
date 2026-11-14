@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [react(), tariffPwa()],
     base: env.BASE_PATH || '/',
-    define: { 'import.meta.env.VITE_MOCK_ONLY': JSON.stringify(mode === 'pages') },
+    define: { 'import.meta.env.VITE_MOCK_ONLY': JSON.stringify(String(mode === 'pages')) },
     server: {
       host: '0.0.0.0', port: 3000, strictPort: true,
       proxy: {

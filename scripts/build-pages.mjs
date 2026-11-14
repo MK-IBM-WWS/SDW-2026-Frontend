@@ -9,6 +9,7 @@ export function buildPages(repoArgument) {
   }
   if (!/^[a-zA-Z0-9_.-]+$/.test(repo) || repo === '.' || repo === '..') throw new Error('Некорректное имя репозитория');
   const base = repo.toLowerCase().endsWith('.github.io') ? '/' : `/${repo}/`;
+  execFileSync(process.execPath, ['scripts/check-environment.mjs'], { stdio: 'inherit' });
   execFileSync(process.execPath, ['node_modules/typescript/bin/tsc', '-b'], { stdio: 'inherit' });
   execFileSync(process.execPath, ['node_modules/vite/bin/vite.js', 'build', '--mode', 'pages', '--outDir', 'dist-pages'], {
     stdio: 'inherit', env: { ...process.env, BASE_PATH: base },
