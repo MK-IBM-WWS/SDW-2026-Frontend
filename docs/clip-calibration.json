@@ -1,0 +1,6245 @@
+{
+  "model": "Xenova/clip-vit-base-patch32",
+  "revision": "6b7c523703ae26e39be4b03774966f8571c7f523",
+  "dtype": "q8",
+  "device": "cpu",
+  "imageFolder": "backend/test-images",
+  "categories": [
+    "cat",
+    "dog",
+    "horse",
+    "tiger",
+    "elephant",
+    "bird",
+    "car",
+    "bicycle",
+    "flower",
+    "football"
+  ],
+  "recordCount": 100,
+  "note": "Calibration uses the category photos supplied with the seed. Use separate held-out photos to assess generalization. Scores are explicitly normalized cosine similarities: (cosine + 1) / 2. Raw cosine is also retained.",
+  "best": {
+    "threshold": 0.6,
+    "topK": 10,
+    "precision": 1,
+    "recall": 1,
+    "f1": 1,
+    "coverage": 1
+  },
+  "summary": [
+    {
+      "threshold": 0.4,
+      "topK": 3,
+      "precision": 1,
+      "recall": 0.29999999999999993,
+      "f1": 0.46153846153846156,
+      "coverage": 1
+    },
+    {
+      "threshold": 0.4,
+      "topK": 5,
+      "precision": 1,
+      "recall": 0.5,
+      "f1": 0.6666666666666667,
+      "coverage": 1
+    },
+    {
+      "threshold": 0.4,
+      "topK": 10,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "coverage": 1
+    },
+    {
+      "threshold": 0.4,
+      "topK": 20,
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.6666666666666667,
+      "coverage": 1
+    },
+    {
+      "threshold": 0.5,
+      "topK": 3,
+      "precision": 1,
+      "recall": 0.29999999999999993,
+      "f1": 0.46153846153846156,
+      "coverage": 1
+    },
+    {
+      "threshold": 0.5,
+      "topK": 5,
+      "precision": 1,
+      "recall": 0.5,
+      "f1": 0.6666666666666667,
+      "coverage": 1
+    },
+    {
+      "threshold": 0.5,
+      "topK": 10,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "coverage": 1
+    },
+    {
+      "threshold": 0.5,
+      "topK": 20,
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.6666666666666667,
+      "coverage": 1
+    },
+    {
+      "threshold": 0.6,
+      "topK": 3,
+      "precision": 1,
+      "recall": 0.29999999999999993,
+      "f1": 0.46153846153846156,
+      "coverage": 1
+    },
+    {
+      "threshold": 0.6,
+      "topK": 5,
+      "precision": 1,
+      "recall": 0.5,
+      "f1": 0.6666666666666667,
+      "coverage": 1
+    },
+    {
+      "threshold": 0.6,
+      "topK": 10,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "coverage": 1
+    },
+    {
+      "threshold": 0.6,
+      "topK": 20,
+      "precision": 0.6,
+      "recall": 1,
+      "f1": 0.7333333333333334,
+      "coverage": 1
+    },
+    {
+      "threshold": 0.7,
+      "topK": 3,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "coverage": 0
+    },
+    {
+      "threshold": 0.7,
+      "topK": 5,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "coverage": 0
+    },
+    {
+      "threshold": 0.7,
+      "topK": 10,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "coverage": 0
+    },
+    {
+      "threshold": 0.7,
+      "topK": 20,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "coverage": 0
+    },
+    {
+      "threshold": 0.8,
+      "topK": 3,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "coverage": 0
+    },
+    {
+      "threshold": 0.8,
+      "topK": 5,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "coverage": 0
+    },
+    {
+      "threshold": 0.8,
+      "topK": 10,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "coverage": 0
+    },
+    {
+      "threshold": 0.8,
+      "topK": 20,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "coverage": 0
+    },
+    {
+      "threshold": 0.9,
+      "topK": 3,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "coverage": 0
+    },
+    {
+      "threshold": 0.9,
+      "topK": 5,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "coverage": 0
+    },
+    {
+      "threshold": 0.9,
+      "topK": 10,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "coverage": 0
+    },
+    {
+      "threshold": 0.9,
+      "topK": 20,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "coverage": 0
+    }
+  ],
+  "rankings": {
+    "cat": [
+      {
+        "name": "CLIP-cat-05 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.29784979136616707,
+        "score": 0.6489248956830835
+      },
+      {
+        "name": "CLIP-cat-06 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.286971071570832,
+        "score": 0.643485535785416
+      },
+      {
+        "name": "CLIP-cat-01 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.2859121906294795,
+        "score": 0.6429560953147397
+      },
+      {
+        "name": "CLIP-cat-09 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.2857121810318216,
+        "score": 0.6428560905159109
+      },
+      {
+        "name": "CLIP-cat-02 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.2853351903980784,
+        "score": 0.6426675951990393
+      },
+      {
+        "name": "CLIP-cat-04 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.28514174410444737,
+        "score": 0.6425708720522236
+      },
+      {
+        "name": "CLIP-cat-03 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.2847651325208882,
+        "score": 0.6423825662604441
+      },
+      {
+        "name": "CLIP-cat-10 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.283231706559528,
+        "score": 0.641615853279764
+      },
+      {
+        "name": "CLIP-cat-07 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.2831786267430523,
+        "score": 0.6415893133715261
+      },
+      {
+        "name": "CLIP-cat-08 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.2816369763093506,
+        "score": 0.6408184881546752
+      },
+      {
+        "name": "CLIP-tiger-05 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.23221161729883613,
+        "score": 0.6161058086494181
+      },
+      {
+        "name": "CLIP-tiger-07 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.22617185048841243,
+        "score": 0.6130859252442062
+      },
+      {
+        "name": "CLIP-tiger-04 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.2260141191802003,
+        "score": 0.6130070595901002
+      },
+      {
+        "name": "CLIP-tiger-10 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.22597864007725735,
+        "score": 0.6129893200386287
+      },
+      {
+        "name": "CLIP-tiger-02 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.22559468437890653,
+        "score": 0.6127973421894533
+      },
+      {
+        "name": "CLIP-tiger-09 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.22462264004309943,
+        "score": 0.6123113200215498
+      },
+      {
+        "name": "CLIP-tiger-01 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.22442299013681322,
+        "score": 0.6122114950684066
+      },
+      {
+        "name": "CLIP-tiger-03 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.2241926989027901,
+        "score": 0.612096349451395
+      },
+      {
+        "name": "CLIP-tiger-08 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.22372321843219828,
+        "score": 0.6118616092160991
+      },
+      {
+        "name": "CLIP-tiger-06 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.22225099390959738,
+        "score": 0.6111254969547987
+      },
+      {
+        "name": "CLIP-bicycle-05 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.1992665389027966,
+        "score": 0.5996332694513983
+      },
+      {
+        "name": "CLIP-dog-05 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.1954895861504331,
+        "score": 0.5977447930752166
+      },
+      {
+        "name": "CLIP-football-07 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.19263874489333785,
+        "score": 0.5963193724466689
+      },
+      {
+        "name": "CLIP-car-05 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.1916258434111768,
+        "score": 0.5958129217055884
+      },
+      {
+        "name": "CLIP-football-03 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.1907592812431747,
+        "score": 0.5953796406215873
+      },
+      {
+        "name": "CLIP-football-01 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.19010152368402625,
+        "score": 0.5950507618420131
+      },
+      {
+        "name": "CLIP-horse-05 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.1897254967234014,
+        "score": 0.5948627483617007
+      },
+      {
+        "name": "CLIP-football-02 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.18893220025240265,
+        "score": 0.5944661001262013
+      },
+      {
+        "name": "CLIP-football-05 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.18851316616339153,
+        "score": 0.5942565830816957
+      },
+      {
+        "name": "CLIP-bicycle-07 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.1881373380884287,
+        "score": 0.5940686690442143
+      },
+      {
+        "name": "CLIP-bird-05 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.1881101500165414,
+        "score": 0.5940550750082707
+      },
+      {
+        "name": "CLIP-football-09 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.18718186036916246,
+        "score": 0.5935909301845812
+      },
+      {
+        "name": "CLIP-football-04 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.18694547084965057,
+        "score": 0.5934727354248253
+      },
+      {
+        "name": "CLIP-bicycle-08 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.18653197685899064,
+        "score": 0.5932659884294953
+      },
+      {
+        "name": "CLIP-football-06 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.18649177445901408,
+        "score": 0.593245887229507
+      },
+      {
+        "name": "CLIP-dog-02 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.18623864530758436,
+        "score": 0.5931193226537922
+      },
+      {
+        "name": "CLIP-bicycle-10 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.18569367403848622,
+        "score": 0.5928468370192431
+      },
+      {
+        "name": "CLIP-bicycle-04 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.18528486337396147,
+        "score": 0.5926424316869807
+      },
+      {
+        "name": "CLIP-bicycle-03 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.18527449300169108,
+        "score": 0.5926372465008456
+      },
+      {
+        "name": "CLIP-car-07 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.1852273842399186,
+        "score": 0.5926136921199593
+      },
+      {
+        "name": "CLIP-football-10 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.1852233832620014,
+        "score": 0.5926116916310007
+      },
+      {
+        "name": "CLIP-horse-07 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.18518775065217155,
+        "score": 0.5925938753260858
+      },
+      {
+        "name": "CLIP-football-08 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.1851865839697791,
+        "score": 0.5925932919848895
+      },
+      {
+        "name": "CLIP-dog-03 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.18428223799157134,
+        "score": 0.5921411189957857
+      },
+      {
+        "name": "CLIP-dog-06 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.1840585673207179,
+        "score": 0.5920292836603589
+      },
+      {
+        "name": "CLIP-dog-01 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.18403709995797904,
+        "score": 0.5920185499789895
+      },
+      {
+        "name": "CLIP-dog-04 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.1835855820018131,
+        "score": 0.5917927910009065
+      },
+      {
+        "name": "CLIP-dog-10 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.18334436964799689,
+        "score": 0.5916721848239984
+      },
+      {
+        "name": "CLIP-elephant-07 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.1831223270106933,
+        "score": 0.5915611635053466
+      },
+      {
+        "name": "CLIP-horse-10 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.18303788360398454,
+        "score": 0.5915189418019923
+      },
+      {
+        "name": "CLIP-dog-07 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.18256532565818,
+        "score": 0.59128266282909
+      },
+      {
+        "name": "CLIP-horse-02 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.18215790204209587,
+        "score": 0.5910789510210479
+      },
+      {
+        "name": "CLIP-bicycle-02 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.18203708148684267,
+        "score": 0.5910185407434213
+      },
+      {
+        "name": "CLIP-dog-09 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.18182997537003584,
+        "score": 0.5909149876850179
+      },
+      {
+        "name": "CLIP-bicycle-01 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.18138777377612725,
+        "score": 0.5906938868880636
+      },
+      {
+        "name": "CLIP-bicycle-09 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.18104895310248426,
+        "score": 0.5905244765512421
+      },
+      {
+        "name": "CLIP-elephant-05 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.1809470895774985,
+        "score": 0.5904735447887492
+      },
+      {
+        "name": "CLIP-horse-01 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.18053773846402707,
+        "score": 0.5902688692320135
+      },
+      {
+        "name": "CLIP-car-10 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.18052823293523249,
+        "score": 0.5902641164676162
+      },
+      {
+        "name": "CLIP-horse-08 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.18036913774014265,
+        "score": 0.5901845688700713
+      },
+      {
+        "name": "CLIP-bicycle-06 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.18034455992308274,
+        "score": 0.5901722799615414
+      },
+      {
+        "name": "CLIP-horse-04 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.17991424509730644,
+        "score": 0.5899571225486532
+      },
+      {
+        "name": "CLIP-elephant-02 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.17957837823374898,
+        "score": 0.5897891891168745
+      },
+      {
+        "name": "CLIP-horse-03 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.1793134987636621,
+        "score": 0.589656749381831
+      },
+      {
+        "name": "CLIP-dog-08 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.17904046544194394,
+        "score": 0.589520232720972
+      },
+      {
+        "name": "CLIP-car-09 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.1783450119788858,
+        "score": 0.5891725059894429
+      },
+      {
+        "name": "CLIP-elephant-10 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.1779093538365326,
+        "score": 0.5889546769182663
+      },
+      {
+        "name": "CLIP-horse-09 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.17760122948557186,
+        "score": 0.5888006147427859
+      },
+      {
+        "name": "CLIP-car-06 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.17677479958191547,
+        "score": 0.5883873997909578
+      },
+      {
+        "name": "CLIP-car-08 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.17677433986134924,
+        "score": 0.5883871699306746
+      },
+      {
+        "name": "CLIP-horse-06 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.1762469187866845,
+        "score": 0.5881234593933422
+      },
+      {
+        "name": "CLIP-bird-02 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.1761964641136292,
+        "score": 0.5880982320568146
+      },
+      {
+        "name": "CLIP-car-01 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.17570508684841166,
+        "score": 0.5878525434242058
+      },
+      {
+        "name": "CLIP-elephant-01 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.1750485018611733,
+        "score": 0.5875242509305867
+      },
+      {
+        "name": "CLIP-car-02 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.17490893030497315,
+        "score": 0.5874544651524866
+      },
+      {
+        "name": "CLIP-elephant-03 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.1748893451108308,
+        "score": 0.5874446725554154
+      },
+      {
+        "name": "CLIP-elephant-09 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.1746028852960685,
+        "score": 0.5873014426480343
+      },
+      {
+        "name": "CLIP-car-03 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.17431290801946606,
+        "score": 0.587156454009733
+      },
+      {
+        "name": "CLIP-car-04 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.17412624812756677,
+        "score": 0.5870631240637834
+      },
+      {
+        "name": "CLIP-elephant-08 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.1739030193813377,
+        "score": 0.5869515096906689
+      },
+      {
+        "name": "CLIP-bird-01 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.1735027144824406,
+        "score": 0.5867513572412203
+      },
+      {
+        "name": "CLIP-bird-03 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.17309584367974307,
+        "score": 0.5865479218398715
+      },
+      {
+        "name": "CLIP-elephant-04 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.172807652028859,
+        "score": 0.5864038260144295
+      },
+      {
+        "name": "CLIP-bird-04 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.17263719359296117,
+        "score": 0.5863185967964806
+      },
+      {
+        "name": "CLIP-bird-07 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.17170485539462146,
+        "score": 0.5858524276973107
+      },
+      {
+        "name": "CLIP-elephant-06 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.17109265543825375,
+        "score": 0.5855463277191268
+      },
+      {
+        "name": "CLIP-bird-06 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.17049211024196945,
+        "score": 0.5852460551209847
+      },
+      {
+        "name": "CLIP-bird-10 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.16641920596001758,
+        "score": 0.5832096029800088
+      },
+      {
+        "name": "CLIP-flower-05 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.1659163397705833,
+        "score": 0.5829581698852917
+      },
+      {
+        "name": "CLIP-bird-08 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.1646716115493311,
+        "score": 0.5823358057746656
+      },
+      {
+        "name": "CLIP-bird-09 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.16309347185403317,
+        "score": 0.5815467359270166
+      },
+      {
+        "name": "CLIP-flower-07 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.15965752536521183,
+        "score": 0.579828762682606
+      },
+      {
+        "name": "CLIP-flower-01 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.15623113678024927,
+        "score": 0.5781155683901247
+      },
+      {
+        "name": "CLIP-flower-02 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.15609534462145544,
+        "score": 0.5780476723107277
+      },
+      {
+        "name": "CLIP-flower-10 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.15536429678508187,
+        "score": 0.577682148392541
+      },
+      {
+        "name": "CLIP-flower-09 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.1546945577332406,
+        "score": 0.5773472788666203
+      },
+      {
+        "name": "CLIP-flower-03 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.15226605804862833,
+        "score": 0.5761330290243142
+      },
+      {
+        "name": "CLIP-flower-04 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.15168549393285297,
+        "score": 0.5758427469664265
+      },
+      {
+        "name": "CLIP-flower-08 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.151249195874617,
+        "score": 0.5756245979373085
+      },
+      {
+        "name": "CLIP-flower-06 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.14854543113209848,
+        "score": 0.5742727155660492
+      }
+    ],
+    "dog": [
+      {
+        "name": "CLIP-dog-08 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.2583708558963631,
+        "score": 0.6291854279481816
+      },
+      {
+        "name": "CLIP-dog-04 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.25746008880998994,
+        "score": 0.628730044404995
+      },
+      {
+        "name": "CLIP-dog-06 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.2566489624272166,
+        "score": 0.6283244812136083
+      },
+      {
+        "name": "CLIP-dog-05 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.2566072669321737,
+        "score": 0.6283036334660869
+      },
+      {
+        "name": "CLIP-dog-03 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.2560765077031324,
+        "score": 0.6280382538515662
+      },
+      {
+        "name": "CLIP-dog-02 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.2559909127684119,
+        "score": 0.627995456384206
+      },
+      {
+        "name": "CLIP-dog-10 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.2539679516714763,
+        "score": 0.6269839758357382
+      },
+      {
+        "name": "CLIP-dog-07 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.25377322953199144,
+        "score": 0.6268866147659957
+      },
+      {
+        "name": "CLIP-dog-01 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.25375541225561254,
+        "score": 0.6268777061278062
+      },
+      {
+        "name": "CLIP-dog-09 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.2509319194434095,
+        "score": 0.6254659597217047
+      },
+      {
+        "name": "CLIP-horse-08 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.2048116271332585,
+        "score": 0.6024058135666293
+      },
+      {
+        "name": "CLIP-flower-01 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.2033236340123244,
+        "score": 0.6016618170061622
+      },
+      {
+        "name": "CLIP-flower-07 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.20237742699943695,
+        "score": 0.6011887134997185
+      },
+      {
+        "name": "CLIP-flower-02 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.20208223164868272,
+        "score": 0.6010411158243414
+      },
+      {
+        "name": "CLIP-flower-05 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.20173283909271422,
+        "score": 0.6008664195463571
+      },
+      {
+        "name": "CLIP-flower-10 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.20160730842102711,
+        "score": 0.6008036542105135
+      },
+      {
+        "name": "CLIP-horse-04 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.20138089586146488,
+        "score": 0.6006904479307325
+      },
+      {
+        "name": "CLIP-horse-10 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.2011250543501227,
+        "score": 0.6005625271750613
+      },
+      {
+        "name": "CLIP-flower-04 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.2006845051074028,
+        "score": 0.6003422525537014
+      },
+      {
+        "name": "CLIP-flower-08 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.20064725118582424,
+        "score": 0.6003236255929121
+      },
+      {
+        "name": "CLIP-horse-05 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.19953565804320925,
+        "score": 0.5997678290216046
+      },
+      {
+        "name": "CLIP-horse-01 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.19927677512619515,
+        "score": 0.5996383875630976
+      },
+      {
+        "name": "CLIP-flower-03 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.19871701621363247,
+        "score": 0.5993585081068162
+      },
+      {
+        "name": "CLIP-horse-07 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.19842783451929802,
+        "score": 0.599213917259649
+      },
+      {
+        "name": "CLIP-flower-06 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.19800423320638189,
+        "score": 0.5990021166031909
+      },
+      {
+        "name": "CLIP-flower-09 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.19722445844349099,
+        "score": 0.5986122292217455
+      },
+      {
+        "name": "CLIP-horse-06 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.19699287850513353,
+        "score": 0.5984964392525668
+      },
+      {
+        "name": "CLIP-horse-03 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.1957022677646977,
+        "score": 0.5978511338823489
+      },
+      {
+        "name": "CLIP-horse-02 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.19474249459414886,
+        "score": 0.5973712472970745
+      },
+      {
+        "name": "CLIP-horse-09 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.19413240490102673,
+        "score": 0.5970662024505133
+      },
+      {
+        "name": "CLIP-tiger-01 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.17805128717747715,
+        "score": 0.5890256435887385
+      },
+      {
+        "name": "CLIP-tiger-08 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.17785045947916372,
+        "score": 0.5889252297395818
+      },
+      {
+        "name": "CLIP-tiger-05 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.1774315931862342,
+        "score": 0.5887157965931171
+      },
+      {
+        "name": "CLIP-bird-05 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.17629453483536667,
+        "score": 0.5881472674176833
+      },
+      {
+        "name": "CLIP-football-01 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.17616028741901313,
+        "score": 0.5880801437095066
+      },
+      {
+        "name": "CLIP-tiger-04 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.17594572643528414,
+        "score": 0.5879728632176421
+      },
+      {
+        "name": "CLIP-tiger-10 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.17424463994602682,
+        "score": 0.5871223199730135
+      },
+      {
+        "name": "CLIP-cat-05 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.17380840221265711,
+        "score": 0.5869042011063286
+      },
+      {
+        "name": "CLIP-bird-01 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.1736474316205809,
+        "score": 0.5868237158102905
+      },
+      {
+        "name": "CLIP-cat-08 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.17344162069210262,
+        "score": 0.5867208103460513
+      },
+      {
+        "name": "CLIP-tiger-02 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.173405389664704,
+        "score": 0.586702694832352
+      },
+      {
+        "name": "CLIP-cat-01 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.17320055730809883,
+        "score": 0.5866002786540494
+      },
+      {
+        "name": "CLIP-tiger-07 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.17313920143496725,
+        "score": 0.5865696007174837
+      },
+      {
+        "name": "CLIP-bird-04 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.17307009364545237,
+        "score": 0.5865350468227262
+      },
+      {
+        "name": "CLIP-bird-02 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.17281547654504292,
+        "score": 0.5864077382725215
+      },
+      {
+        "name": "CLIP-football-08 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.17271096976277664,
+        "score": 0.5863554848813883
+      },
+      {
+        "name": "CLIP-football-02 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.17256655972930923,
+        "score": 0.5862832798646547
+      },
+      {
+        "name": "CLIP-bird-08 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.172466082888799,
+        "score": 0.5862330414443995
+      },
+      {
+        "name": "CLIP-football-04 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.1724114532148906,
+        "score": 0.5862057266074453
+      },
+      {
+        "name": "CLIP-football-03 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.17193944149296214,
+        "score": 0.5859697207464811
+      },
+      {
+        "name": "CLIP-bird-06 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.17181358669091018,
+        "score": 0.5859067933454551
+      },
+      {
+        "name": "CLIP-football-07 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.17172990221215986,
+        "score": 0.58586495110608
+      },
+      {
+        "name": "CLIP-tiger-06 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.17089722067233146,
+        "score": 0.5854486103361657
+      },
+      {
+        "name": "CLIP-bird-07 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.17069022270348064,
+        "score": 0.5853451113517403
+      },
+      {
+        "name": "CLIP-bicycle-05 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.17055619105413666,
+        "score": 0.5852780955270683
+      },
+      {
+        "name": "CLIP-cat-10 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.17053201586071245,
+        "score": 0.5852660079303562
+      },
+      {
+        "name": "CLIP-tiger-03 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.1696404705885075,
+        "score": 0.5848202352942538
+      },
+      {
+        "name": "CLIP-football-06 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.16959167051346336,
+        "score": 0.5847958352567317
+      },
+      {
+        "name": "CLIP-cat-04 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.16959154425800999,
+        "score": 0.584795772129005
+      },
+      {
+        "name": "CLIP-football-10 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.1692765152640329,
+        "score": 0.5846382576320165
+      },
+      {
+        "name": "CLIP-cat-02 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.1688116961848082,
+        "score": 0.5844058480924041
+      },
+      {
+        "name": "CLIP-bird-03 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.16877046990660433,
+        "score": 0.5843852349533022
+      },
+      {
+        "name": "CLIP-cat-07 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.16809966806714235,
+        "score": 0.5840498340335711
+      },
+      {
+        "name": "CLIP-bird-10 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.16781588935606445,
+        "score": 0.5839079446780322
+      },
+      {
+        "name": "CLIP-cat-06 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.1677330604987128,
+        "score": 0.5838665302493564
+      },
+      {
+        "name": "CLIP-football-05 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.16768670817228495,
+        "score": 0.5838433540861425
+      },
+      {
+        "name": "CLIP-tiger-09 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.1676492487799083,
+        "score": 0.5838246243899542
+      },
+      {
+        "name": "CLIP-cat-09 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.16697554304220177,
+        "score": 0.5834877715211009
+      },
+      {
+        "name": "CLIP-bicycle-08 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.16672387799195124,
+        "score": 0.5833619389959757
+      },
+      {
+        "name": "CLIP-bicycle-01 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.16570225286033485,
+        "score": 0.5828511264301675
+      },
+      {
+        "name": "CLIP-football-09 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.1654917812267648,
+        "score": 0.5827458906133824
+      },
+      {
+        "name": "CLIP-bicycle-04 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.16502902553992427,
+        "score": 0.5825145127699621
+      },
+      {
+        "name": "CLIP-bicycle-10 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.16489564204596593,
+        "score": 0.582447821022983
+      },
+      {
+        "name": "CLIP-elephant-02 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.16461202819662424,
+        "score": 0.5823060140983121
+      },
+      {
+        "name": "CLIP-elephant-07 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.1643634545485066,
+        "score": 0.5821817272742533
+      },
+      {
+        "name": "CLIP-elephant-08 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.1639013297957285,
+        "score": 0.5819506648978643
+      },
+      {
+        "name": "CLIP-elephant-05 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.16387622459272314,
+        "score": 0.5819381122963616
+      },
+      {
+        "name": "CLIP-cat-03 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.16342704299166538,
+        "score": 0.5817135214958327
+      },
+      {
+        "name": "CLIP-car-10 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.16307259795297863,
+        "score": 0.5815362989764893
+      },
+      {
+        "name": "CLIP-car-05 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.16298283412831482,
+        "score": 0.5814914170641574
+      },
+      {
+        "name": "CLIP-elephant-01 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.1628260239252451,
+        "score": 0.5814130119626225
+      },
+      {
+        "name": "CLIP-elephant-06 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.16249095821832996,
+        "score": 0.581245479109165
+      },
+      {
+        "name": "CLIP-bird-09 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.16221534636418428,
+        "score": 0.5811076731820921
+      },
+      {
+        "name": "CLIP-car-08 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.1621932799969903,
+        "score": 0.5810966399984951
+      },
+      {
+        "name": "CLIP-elephant-04 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.16209758113382855,
+        "score": 0.5810487905669143
+      },
+      {
+        "name": "CLIP-bicycle-07 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.16188644664689028,
+        "score": 0.5809432233234452
+      },
+      {
+        "name": "CLIP-elephant-10 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.16170667999210478,
+        "score": 0.5808533399960524
+      },
+      {
+        "name": "CLIP-car-07 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.16090870375514446,
+        "score": 0.5804543518775722
+      },
+      {
+        "name": "CLIP-bicycle-02 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.16062170919520788,
+        "score": 0.5803108545976039
+      },
+      {
+        "name": "CLIP-elephant-09 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.16061609211015526,
+        "score": 0.5803080460550776
+      },
+      {
+        "name": "CLIP-bicycle-06 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.16047605147920554,
+        "score": 0.5802380257396028
+      },
+      {
+        "name": "CLIP-car-01 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.16027377586735825,
+        "score": 0.5801368879336791
+      },
+      {
+        "name": "CLIP-bicycle-03 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.15935002901664105,
+        "score": 0.5796750145083205
+      },
+      {
+        "name": "CLIP-car-06 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.15900007468680882,
+        "score": 0.5795000373434044
+      },
+      {
+        "name": "CLIP-car-04 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.15821573453609786,
+        "score": 0.579107867268049
+      },
+      {
+        "name": "CLIP-elephant-03 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.15819506432235134,
+        "score": 0.5790975321611757
+      },
+      {
+        "name": "CLIP-bicycle-09 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.15629138098271586,
+        "score": 0.5781456904913579
+      },
+      {
+        "name": "CLIP-car-03 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.15537167525951384,
+        "score": 0.5776858376297569
+      },
+      {
+        "name": "CLIP-car-02 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.15490581127400435,
+        "score": 0.5774529056370021
+      },
+      {
+        "name": "CLIP-car-09 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.15412171597770044,
+        "score": 0.5770608579888502
+      }
+    ],
+    "horse": [
+      {
+        "name": "CLIP-horse-04 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.28429565296432846,
+        "score": 0.6421478264821643
+      },
+      {
+        "name": "CLIP-horse-03 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.28300222235214273,
+        "score": 0.6415011111760713
+      },
+      {
+        "name": "CLIP-horse-10 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.28172163128200417,
+        "score": 0.6408608156410021
+      },
+      {
+        "name": "CLIP-horse-02 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.28010637630970614,
+        "score": 0.640053188154853
+      },
+      {
+        "name": "CLIP-horse-07 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.2799420302571376,
+        "score": 0.6399710151285688
+      },
+      {
+        "name": "CLIP-horse-08 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.27963875815123024,
+        "score": 0.6398193790756151
+      },
+      {
+        "name": "CLIP-horse-05 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.27960351365001734,
+        "score": 0.6398017568250087
+      },
+      {
+        "name": "CLIP-horse-01 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.27718206934374146,
+        "score": 0.6385910346718707
+      },
+      {
+        "name": "CLIP-horse-06 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.2770807181802929,
+        "score": 0.6385403590901464
+      },
+      {
+        "name": "CLIP-horse-09 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.27678573217714264,
+        "score": 0.6383928660885714
+      },
+      {
+        "name": "CLIP-dog-03 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.22500997335189155,
+        "score": 0.6125049866759458
+      },
+      {
+        "name": "CLIP-dog-02 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.223765946054316,
+        "score": 0.611882973027158
+      },
+      {
+        "name": "CLIP-dog-01 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.22346332696749874,
+        "score": 0.6117316634837494
+      },
+      {
+        "name": "CLIP-dog-10 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.22332437605171535,
+        "score": 0.6116621880258577
+      },
+      {
+        "name": "CLIP-dog-05 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.22220929587565647,
+        "score": 0.6111046479378283
+      },
+      {
+        "name": "CLIP-dog-04 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.22188476793503129,
+        "score": 0.6109423839675157
+      },
+      {
+        "name": "CLIP-dog-07 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.2214608011881635,
+        "score": 0.6107304005940818
+      },
+      {
+        "name": "CLIP-dog-09 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.22036244856098366,
+        "score": 0.6101812242804918
+      },
+      {
+        "name": "CLIP-dog-08 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.21733805806775958,
+        "score": 0.6086690290338798
+      },
+      {
+        "name": "CLIP-dog-06 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.215558317608217,
+        "score": 0.6077791588041085
+      },
+      {
+        "name": "CLIP-elephant-02 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.2057281306519315,
+        "score": 0.6028640653259657
+      },
+      {
+        "name": "CLIP-elephant-07 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.2056404200978098,
+        "score": 0.6028202100489048
+      },
+      {
+        "name": "CLIP-elephant-01 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.20480914542987544,
+        "score": 0.6024045727149377
+      },
+      {
+        "name": "CLIP-elephant-09 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.20419277230017613,
+        "score": 0.6020963861500881
+      },
+      {
+        "name": "CLIP-elephant-05 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.20415510498114633,
+        "score": 0.6020775524905732
+      },
+      {
+        "name": "CLIP-elephant-10 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.20391057514554645,
+        "score": 0.6019552875727732
+      },
+      {
+        "name": "CLIP-elephant-04 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.20227632839910112,
+        "score": 0.6011381641995506
+      },
+      {
+        "name": "CLIP-elephant-08 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.20170368371729294,
+        "score": 0.6008518418586465
+      },
+      {
+        "name": "CLIP-elephant-03 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.20144267887668518,
+        "score": 0.6007213394383426
+      },
+      {
+        "name": "CLIP-tiger-05 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.20079618831496623,
+        "score": 0.6003980941574831
+      },
+      {
+        "name": "CLIP-tiger-10 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.20028357887228251,
+        "score": 0.6001417894361413
+      },
+      {
+        "name": "CLIP-elephant-06 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.19832459754577064,
+        "score": 0.5991622987728853
+      },
+      {
+        "name": "CLIP-tiger-09 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.19825596986683414,
+        "score": 0.599127984933417
+      },
+      {
+        "name": "CLIP-tiger-04 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.19647963654830466,
+        "score": 0.5982398182741523
+      },
+      {
+        "name": "CLIP-tiger-07 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.19577984353512734,
+        "score": 0.5978899217675637
+      },
+      {
+        "name": "CLIP-tiger-03 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.195050981095607,
+        "score": 0.5975254905478035
+      },
+      {
+        "name": "CLIP-tiger-08 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.19498824330411538,
+        "score": 0.5974941216520577
+      },
+      {
+        "name": "CLIP-tiger-01 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.19482120137790138,
+        "score": 0.5974106006889507
+      },
+      {
+        "name": "CLIP-bird-05 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.193073894143177,
+        "score": 0.5965369470715884
+      },
+      {
+        "name": "CLIP-tiger-02 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.19302212882308314,
+        "score": 0.5965110644115416
+      },
+      {
+        "name": "CLIP-tiger-06 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.1921878078087685,
+        "score": 0.5960939039043842
+      },
+      {
+        "name": "CLIP-football-07 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.1915802101514855,
+        "score": 0.5957901050757427
+      },
+      {
+        "name": "CLIP-bird-02 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.19115780571614008,
+        "score": 0.59557890285807
+      },
+      {
+        "name": "CLIP-bicycle-05 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.19107813925440195,
+        "score": 0.5955390696272009
+      },
+      {
+        "name": "CLIP-bird-01 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.19081680369693843,
+        "score": 0.5954084018484692
+      },
+      {
+        "name": "CLIP-football-01 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.19001718898545816,
+        "score": 0.595008594492729
+      },
+      {
+        "name": "CLIP-bird-03 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.1890756863374975,
+        "score": 0.5945378431687487
+      },
+      {
+        "name": "CLIP-bird-04 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.1889449343188984,
+        "score": 0.5944724671594492
+      },
+      {
+        "name": "CLIP-bicycle-04 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.18892691978926954,
+        "score": 0.5944634598946348
+      },
+      {
+        "name": "CLIP-bicycle-01 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.1884058952842353,
+        "score": 0.5942029476421177
+      },
+      {
+        "name": "CLIP-bicycle-03 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.18751165720784463,
+        "score": 0.5937558286039223
+      },
+      {
+        "name": "CLIP-football-09 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.18737165964765026,
+        "score": 0.5936858298238251
+      },
+      {
+        "name": "CLIP-cat-05 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.18724551489994576,
+        "score": 0.5936227574499728
+      },
+      {
+        "name": "CLIP-bicycle-07 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.1871883439935873,
+        "score": 0.5935941719967937
+      },
+      {
+        "name": "CLIP-football-04 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.18704047273769217,
+        "score": 0.5935202363688461
+      },
+      {
+        "name": "CLIP-football-03 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.18678327612768103,
+        "score": 0.5933916380638405
+      },
+      {
+        "name": "CLIP-bicycle-08 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.18658719657232437,
+        "score": 0.5932935982861622
+      },
+      {
+        "name": "CLIP-bird-10 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.1864309742803155,
+        "score": 0.5932154871401577
+      },
+      {
+        "name": "CLIP-football-02 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.18633394000963913,
+        "score": 0.5931669700048195
+      },
+      {
+        "name": "CLIP-bird-07 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.18628635022838305,
+        "score": 0.5931431751141916
+      },
+      {
+        "name": "CLIP-bicycle-10 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.18581038697828017,
+        "score": 0.5929051934891401
+      },
+      {
+        "name": "CLIP-football-06 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.185472275894145,
+        "score": 0.5927361379470725
+      },
+      {
+        "name": "CLIP-football-08 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.18528182332591495,
+        "score": 0.5926409116629575
+      },
+      {
+        "name": "CLIP-cat-01 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.18524784548282405,
+        "score": 0.5926239227414121
+      },
+      {
+        "name": "CLIP-bicycle-02 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.18454807629224623,
+        "score": 0.5922740381461231
+      },
+      {
+        "name": "CLIP-bird-08 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.18443534903616238,
+        "score": 0.5922176745180812
+      },
+      {
+        "name": "CLIP-cat-10 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.18414390522557408,
+        "score": 0.592071952612787
+      },
+      {
+        "name": "CLIP-bird-09 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.18375642033227105,
+        "score": 0.5918782101661355
+      },
+      {
+        "name": "CLIP-cat-02 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.1831852266160874,
+        "score": 0.5915926133080437
+      },
+      {
+        "name": "CLIP-football-10 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.18317789019339487,
+        "score": 0.5915889450966975
+      },
+      {
+        "name": "CLIP-bicycle-09 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.1830442779950397,
+        "score": 0.5915221389975198
+      },
+      {
+        "name": "CLIP-cat-04 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.18294125763544133,
+        "score": 0.5914706288177207
+      },
+      {
+        "name": "CLIP-bird-06 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.18285471785136828,
+        "score": 0.5914273589256841
+      },
+      {
+        "name": "CLIP-cat-09 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.18272334393196266,
+        "score": 0.5913616719659813
+      },
+      {
+        "name": "CLIP-football-05 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.18237932696090686,
+        "score": 0.5911896634804534
+      },
+      {
+        "name": "CLIP-cat-03 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.181171723359714,
+        "score": 0.5905858616798569
+      },
+      {
+        "name": "CLIP-cat-07 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.17988069030416864,
+        "score": 0.5899403451520844
+      },
+      {
+        "name": "CLIP-cat-08 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.1798159664670124,
+        "score": 0.5899079832335062
+      },
+      {
+        "name": "CLIP-cat-06 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.17764320756469076,
+        "score": 0.5888216037823454
+      },
+      {
+        "name": "CLIP-car-05 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.17742861545461439,
+        "score": 0.5887143077273072
+      },
+      {
+        "name": "CLIP-bicycle-06 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.17651962590596468,
+        "score": 0.5882598129529824
+      },
+      {
+        "name": "CLIP-car-10 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.17607044611621125,
+        "score": 0.5880352230581056
+      },
+      {
+        "name": "CLIP-car-07 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.17457579578128302,
+        "score": 0.5872878978906415
+      },
+      {
+        "name": "CLIP-car-01 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.1731511378530055,
+        "score": 0.5865755689265028
+      },
+      {
+        "name": "CLIP-car-04 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.17290018967848494,
+        "score": 0.5864500948392425
+      },
+      {
+        "name": "CLIP-car-08 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.17148036588660243,
+        "score": 0.5857401829433012
+      },
+      {
+        "name": "CLIP-car-09 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.17088829566122996,
+        "score": 0.5854441478306149
+      },
+      {
+        "name": "CLIP-car-02 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.17079858076813118,
+        "score": 0.5853992903840656
+      },
+      {
+        "name": "CLIP-car-03 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.17070844181901698,
+        "score": 0.5853542209095085
+      },
+      {
+        "name": "CLIP-flower-07 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.16881534117474462,
+        "score": 0.5844076705873723
+      },
+      {
+        "name": "CLIP-flower-01 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.16871073970504405,
+        "score": 0.584355369852522
+      },
+      {
+        "name": "CLIP-flower-02 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.16809954813578434,
+        "score": 0.5840497740678922
+      },
+      {
+        "name": "CLIP-car-06 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.16787088972304903,
+        "score": 0.5839354448615245
+      },
+      {
+        "name": "CLIP-flower-05 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.1678601843844595,
+        "score": 0.5839300921922297
+      },
+      {
+        "name": "CLIP-flower-04 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.1675803968591062,
+        "score": 0.583790198429553
+      },
+      {
+        "name": "CLIP-flower-03 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.1672121492773362,
+        "score": 0.5836060746386681
+      },
+      {
+        "name": "CLIP-flower-10 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.16636143100658005,
+        "score": 0.58318071550329
+      },
+      {
+        "name": "CLIP-flower-08 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.1653830462398317,
+        "score": 0.5826915231199159
+      },
+      {
+        "name": "CLIP-flower-09 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.1633912293418211,
+        "score": 0.5816956146709106
+      },
+      {
+        "name": "CLIP-flower-06 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.15903445256427234,
+        "score": 0.5795172262821362
+      }
+    ],
+    "tiger": [
+      {
+        "name": "CLIP-tiger-05 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.3106225667653567,
+        "score": 0.6553112833826784
+      },
+      {
+        "name": "CLIP-tiger-04 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.3073484633366529,
+        "score": 0.6536742316683264
+      },
+      {
+        "name": "CLIP-tiger-10 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.3066888711165382,
+        "score": 0.6533444355582692
+      },
+      {
+        "name": "CLIP-tiger-09 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.3065463037589915,
+        "score": 0.6532731518794958
+      },
+      {
+        "name": "CLIP-tiger-06 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.3058963698853505,
+        "score": 0.6529481849426753
+      },
+      {
+        "name": "CLIP-tiger-03 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.3056102256176095,
+        "score": 0.6528051128088047
+      },
+      {
+        "name": "CLIP-tiger-01 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.30339383882934523,
+        "score": 0.6516969194146727
+      },
+      {
+        "name": "CLIP-tiger-08 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.30299424514340684,
+        "score": 0.6514971225717034
+      },
+      {
+        "name": "CLIP-tiger-07 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.3024559403028248,
+        "score": 0.6512279701514124
+      },
+      {
+        "name": "CLIP-tiger-02 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.3018183154584978,
+        "score": 0.650909157729249
+      },
+      {
+        "name": "CLIP-cat-05 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.2416441614232822,
+        "score": 0.6208220807116411
+      },
+      {
+        "name": "CLIP-cat-06 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.2338174267448519,
+        "score": 0.6169087133724259
+      },
+      {
+        "name": "CLIP-cat-04 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.23354981554019305,
+        "score": 0.6167749077700966
+      },
+      {
+        "name": "CLIP-cat-08 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.23302001879908993,
+        "score": 0.6165100093995449
+      },
+      {
+        "name": "CLIP-cat-01 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.23235279767422062,
+        "score": 0.6161763988371103
+      },
+      {
+        "name": "CLIP-cat-09 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.23217020538862215,
+        "score": 0.616085102694311
+      },
+      {
+        "name": "CLIP-cat-02 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.2315734327199022,
+        "score": 0.6157867163599511
+      },
+      {
+        "name": "CLIP-cat-10 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.23107500446615686,
+        "score": 0.6155375022330785
+      },
+      {
+        "name": "CLIP-cat-07 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.23062565764639065,
+        "score": 0.6153128288231953
+      },
+      {
+        "name": "CLIP-cat-03 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.22953842645835018,
+        "score": 0.6147692132291751
+      },
+      {
+        "name": "CLIP-elephant-07 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.2087618019873714,
+        "score": 0.6043809009936857
+      },
+      {
+        "name": "CLIP-elephant-05 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.20682320705039411,
+        "score": 0.6034116035251971
+      },
+      {
+        "name": "CLIP-elephant-02 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.20623976744128075,
+        "score": 0.6031198837206404
+      },
+      {
+        "name": "CLIP-elephant-01 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.20533385490685122,
+        "score": 0.6026669274534256
+      },
+      {
+        "name": "CLIP-elephant-04 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.20517733866574187,
+        "score": 0.6025886693328709
+      },
+      {
+        "name": "CLIP-elephant-08 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.20362195088558405,
+        "score": 0.601810975442792
+      },
+      {
+        "name": "CLIP-elephant-10 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.20347345362807318,
+        "score": 0.6017367268140366
+      },
+      {
+        "name": "CLIP-elephant-09 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.20330919668425884,
+        "score": 0.6016545983421294
+      },
+      {
+        "name": "CLIP-elephant-03 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.20195031508973146,
+        "score": 0.6009751575448657
+      },
+      {
+        "name": "CLIP-elephant-06 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.20028635811198967,
+        "score": 0.6001431790559948
+      },
+      {
+        "name": "CLIP-bird-05 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.20018712991607165,
+        "score": 0.6000935649580358
+      },
+      {
+        "name": "CLIP-dog-05 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.19806238260815215,
+        "score": 0.5990311913040761
+      },
+      {
+        "name": "CLIP-horse-05 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.19374351299776132,
+        "score": 0.5968717564988807
+      },
+      {
+        "name": "CLIP-dog-04 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.1929242067190394,
+        "score": 0.5964621033595197
+      },
+      {
+        "name": "CLIP-bird-01 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.1923707278824453,
+        "score": 0.5961853639412227
+      },
+      {
+        "name": "CLIP-dog-01 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.19218822555952533,
+        "score": 0.5960941127797627
+      },
+      {
+        "name": "CLIP-dog-03 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.19145656590485244,
+        "score": 0.5957282829524262
+      },
+      {
+        "name": "CLIP-dog-02 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.19131797787019572,
+        "score": 0.5956589889350978
+      },
+      {
+        "name": "CLIP-bird-07 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.19092658100232043,
+        "score": 0.5954632905011602
+      },
+      {
+        "name": "CLIP-bird-02 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.1907974367559423,
+        "score": 0.5953987183779712
+      },
+      {
+        "name": "CLIP-dog-06 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.19078870623392777,
+        "score": 0.5953943531169639
+      },
+      {
+        "name": "CLIP-bird-04 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.19076251528675478,
+        "score": 0.5953812576433773
+      },
+      {
+        "name": "CLIP-dog-09 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.1904687830635064,
+        "score": 0.5952343915317532
+      },
+      {
+        "name": "CLIP-dog-10 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.18949302816282232,
+        "score": 0.5947465140814112
+      },
+      {
+        "name": "CLIP-bird-06 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.18901088589094944,
+        "score": 0.5945054429454747
+      },
+      {
+        "name": "CLIP-dog-07 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.18831783712329403,
+        "score": 0.594158918561647
+      },
+      {
+        "name": "CLIP-bird-03 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.18828769783803256,
+        "score": 0.5941438489190163
+      },
+      {
+        "name": "CLIP-bird-08 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.18803589962788178,
+        "score": 0.5940179498139408
+      },
+      {
+        "name": "CLIP-bird-09 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.18791608915835314,
+        "score": 0.5939580445791766
+      },
+      {
+        "name": "CLIP-horse-07 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.18753429360473256,
+        "score": 0.5937671468023663
+      },
+      {
+        "name": "CLIP-horse-04 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.18752335030406153,
+        "score": 0.5937616751520307
+      },
+      {
+        "name": "CLIP-bird-10 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.18715114809436945,
+        "score": 0.5935755740471848
+      },
+      {
+        "name": "CLIP-dog-08 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.18594042343074804,
+        "score": 0.592970211715374
+      },
+      {
+        "name": "CLIP-horse-08 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.18502208984888827,
+        "score": 0.5925110449244442
+      },
+      {
+        "name": "CLIP-football-06 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.18487994390790016,
+        "score": 0.59243997195395
+      },
+      {
+        "name": "CLIP-football-09 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.18466472456325864,
+        "score": 0.5923323622816293
+      },
+      {
+        "name": "CLIP-horse-10 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.18459289224389697,
+        "score": 0.5922964461219484
+      },
+      {
+        "name": "CLIP-horse-01 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.18441605773474254,
+        "score": 0.5922080288673712
+      },
+      {
+        "name": "CLIP-horse-06 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.18436419610211513,
+        "score": 0.5921820980510576
+      },
+      {
+        "name": "CLIP-football-05 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.1838699188640041,
+        "score": 0.591934959432002
+      },
+      {
+        "name": "CLIP-horse-09 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.18338144080302546,
+        "score": 0.5916907204015127
+      },
+      {
+        "name": "CLIP-horse-02 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.18322993307875385,
+        "score": 0.591614966539377
+      },
+      {
+        "name": "CLIP-horse-03 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.18296153022160977,
+        "score": 0.5914807651108049
+      },
+      {
+        "name": "CLIP-football-08 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.18272497073717603,
+        "score": 0.591362485368588
+      },
+      {
+        "name": "CLIP-football-04 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.1822195808851346,
+        "score": 0.5911097904425673
+      },
+      {
+        "name": "CLIP-football-07 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.18189444589823422,
+        "score": 0.5909472229491171
+      },
+      {
+        "name": "CLIP-football-01 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.1818656222234964,
+        "score": 0.5909328111117482
+      },
+      {
+        "name": "CLIP-football-03 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.1817032021504244,
+        "score": 0.5908516010752122
+      },
+      {
+        "name": "CLIP-football-02 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.1811921339355396,
+        "score": 0.5905960669677698
+      },
+      {
+        "name": "CLIP-football-10 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.17594358368983298,
+        "score": 0.5879717918449165
+      },
+      {
+        "name": "CLIP-car-05 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.17435398574461455,
+        "score": 0.5871769928723073
+      },
+      {
+        "name": "CLIP-car-07 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.16948764028389074,
+        "score": 0.5847438201419454
+      },
+      {
+        "name": "CLIP-bicycle-05 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.16573616521207465,
+        "score": 0.5828680826060373
+      },
+      {
+        "name": "CLIP-car-08 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.16471816616130455,
+        "score": 0.5823590830806523
+      },
+      {
+        "name": "CLIP-car-06 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.16459613618641958,
+        "score": 0.5822980680932098
+      },
+      {
+        "name": "CLIP-car-10 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.16401293385635476,
+        "score": 0.5820064669281774
+      },
+      {
+        "name": "CLIP-car-04 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.1636428522787888,
+        "score": 0.5818214261393944
+      },
+      {
+        "name": "CLIP-car-01 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.16333815450079636,
+        "score": 0.5816690772503982
+      },
+      {
+        "name": "CLIP-car-09 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.1613012215396617,
+        "score": 0.5806506107698308
+      },
+      {
+        "name": "CLIP-car-02 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.1597228631200997,
+        "score": 0.5798614315600499
+      },
+      {
+        "name": "CLIP-flower-07 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.15858943379334436,
+        "score": 0.5792947168966722
+      },
+      {
+        "name": "CLIP-car-03 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.1569699172971195,
+        "score": 0.5784849586485598
+      },
+      {
+        "name": "CLIP-flower-05 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.15690907761326398,
+        "score": 0.578454538806632
+      },
+      {
+        "name": "CLIP-flower-04 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.1553325442837415,
+        "score": 0.5776662721418707
+      },
+      {
+        "name": "CLIP-flower-01 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.1550664721249671,
+        "score": 0.5775332360624835
+      },
+      {
+        "name": "CLIP-flower-02 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.15427179627143953,
+        "score": 0.5771358981357197
+      },
+      {
+        "name": "CLIP-flower-08 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.15415419322842533,
+        "score": 0.5770770966142127
+      },
+      {
+        "name": "CLIP-bicycle-08 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.154133412612962,
+        "score": 0.577066706306481
+      },
+      {
+        "name": "CLIP-flower-09 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.15359981587580307,
+        "score": 0.5767999079379016
+      },
+      {
+        "name": "CLIP-bicycle-04 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.15355525219708335,
+        "score": 0.5767776260985417
+      },
+      {
+        "name": "CLIP-flower-10 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.1530248553913993,
+        "score": 0.5765124276956997
+      },
+      {
+        "name": "CLIP-flower-03 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.1525782395650801,
+        "score": 0.57628911978254
+      },
+      {
+        "name": "CLIP-bicycle-03 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.1518402962276436,
+        "score": 0.5759201481138219
+      },
+      {
+        "name": "CLIP-bicycle-01 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.15120354042202375,
+        "score": 0.5756017702110119
+      },
+      {
+        "name": "CLIP-bicycle-09 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.1510487171894669,
+        "score": 0.5755243585947335
+      },
+      {
+        "name": "CLIP-bicycle-06 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.150727555245915,
+        "score": 0.5753637776229575
+      },
+      {
+        "name": "CLIP-bicycle-02 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.15053675653791226,
+        "score": 0.5752683782689562
+      },
+      {
+        "name": "CLIP-flower-06 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.1504160684211707,
+        "score": 0.5752080342105853
+      },
+      {
+        "name": "CLIP-bicycle-07 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.15039505658729704,
+        "score": 0.5751975282936486
+      },
+      {
+        "name": "CLIP-bicycle-10 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.1496123572514593,
+        "score": 0.5748061786257297
+      }
+    ],
+    "elephant": [
+      {
+        "name": "CLIP-elephant-05 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.28382181249710337,
+        "score": 0.6419109062485517
+      },
+      {
+        "name": "CLIP-elephant-09 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.2781964998891953,
+        "score": 0.6390982499445976
+      },
+      {
+        "name": "CLIP-elephant-04 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.2779339892682184,
+        "score": 0.6389669946341092
+      },
+      {
+        "name": "CLIP-elephant-08 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.2779015659782791,
+        "score": 0.6389507829891395
+      },
+      {
+        "name": "CLIP-elephant-07 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.27733048612065636,
+        "score": 0.6386652430603281
+      },
+      {
+        "name": "CLIP-elephant-10 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.27714883905904353,
+        "score": 0.6385744195295218
+      },
+      {
+        "name": "CLIP-elephant-03 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.2768498427012149,
+        "score": 0.6384249213506075
+      },
+      {
+        "name": "CLIP-elephant-02 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.27576794360972207,
+        "score": 0.637883971804861
+      },
+      {
+        "name": "CLIP-elephant-06 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.27483378150812743,
+        "score": 0.6374168907540637
+      },
+      {
+        "name": "CLIP-elephant-01 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.27282892067743025,
+        "score": 0.6364144603387152
+      },
+      {
+        "name": "CLIP-horse-05 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.24283343563164117,
+        "score": 0.6214167178158205
+      },
+      {
+        "name": "CLIP-horse-04 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.23726473369891896,
+        "score": 0.6186323668494594
+      },
+      {
+        "name": "CLIP-horse-08 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.2354150617049304,
+        "score": 0.6177075308524652
+      },
+      {
+        "name": "CLIP-horse-10 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.23480144214009227,
+        "score": 0.6174007210700462
+      },
+      {
+        "name": "CLIP-horse-07 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.23372356079237105,
+        "score": 0.6168617803961856
+      },
+      {
+        "name": "CLIP-horse-03 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.23339782603683779,
+        "score": 0.6166989130184188
+      },
+      {
+        "name": "CLIP-horse-02 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.23303893633009887,
+        "score": 0.6165194681650494
+      },
+      {
+        "name": "CLIP-horse-09 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.23289378793118654,
+        "score": 0.6164468939655933
+      },
+      {
+        "name": "CLIP-horse-06 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.2299215153855554,
+        "score": 0.6149607576927777
+      },
+      {
+        "name": "CLIP-horse-01 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.22939591730011505,
+        "score": 0.6146979586500575
+      },
+      {
+        "name": "CLIP-dog-05 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.22812423013076036,
+        "score": 0.6140621150653802
+      },
+      {
+        "name": "CLIP-football-07 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.2222754531799295,
+        "score": 0.6111377265899648
+      },
+      {
+        "name": "CLIP-football-09 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.2219791551712009,
+        "score": 0.6109895775856005
+      },
+      {
+        "name": "CLIP-tiger-05 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.22087375417945485,
+        "score": 0.6104368770897274
+      },
+      {
+        "name": "CLIP-dog-03 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.2208308145767899,
+        "score": 0.6104154072883949
+      },
+      {
+        "name": "CLIP-dog-04 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.2201252210291801,
+        "score": 0.6100626105145901
+      },
+      {
+        "name": "CLIP-football-03 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.21973650362845365,
+        "score": 0.6098682518142269
+      },
+      {
+        "name": "CLIP-football-10 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.21769261025577188,
+        "score": 0.608846305127886
+      },
+      {
+        "name": "CLIP-dog-10 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.21766200384126394,
+        "score": 0.608831001920632
+      },
+      {
+        "name": "CLIP-football-06 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.21764467060821047,
+        "score": 0.6088223353041052
+      },
+      {
+        "name": "CLIP-football-02 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.21756331211310695,
+        "score": 0.6087816560565534
+      },
+      {
+        "name": "CLIP-dog-02 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.21752310992496082,
+        "score": 0.6087615549624804
+      },
+      {
+        "name": "CLIP-football-01 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.21746430761620958,
+        "score": 0.6087321538081047
+      },
+      {
+        "name": "CLIP-football-08 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.21706270539459488,
+        "score": 0.6085313526972974
+      },
+      {
+        "name": "CLIP-football-04 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.21696002958538574,
+        "score": 0.6084800147926929
+      },
+      {
+        "name": "CLIP-dog-01 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.21630693378553623,
+        "score": 0.6081534668927682
+      },
+      {
+        "name": "CLIP-football-05 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.21581747327864376,
+        "score": 0.6079087366393219
+      },
+      {
+        "name": "CLIP-dog-09 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.21565510244289526,
+        "score": 0.6078275512214476
+      },
+      {
+        "name": "CLIP-dog-06 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.21486786870789815,
+        "score": 0.6074339343539491
+      },
+      {
+        "name": "CLIP-tiger-09 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.21462673763323717,
+        "score": 0.6073133688166186
+      },
+      {
+        "name": "CLIP-dog-08 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.21423699639652172,
+        "score": 0.6071184981982609
+      },
+      {
+        "name": "CLIP-tiger-10 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.2134918987971931,
+        "score": 0.6067459493985965
+      },
+      {
+        "name": "CLIP-dog-07 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.21343525462264726,
+        "score": 0.6067176273113236
+      },
+      {
+        "name": "CLIP-bird-05 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.2133729678721977,
+        "score": 0.6066864839360988
+      },
+      {
+        "name": "CLIP-tiger-04 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.2127266524524215,
+        "score": 0.6063633262262107
+      },
+      {
+        "name": "CLIP-bicycle-05 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.21246564975186397,
+        "score": 0.606232824875932
+      },
+      {
+        "name": "CLIP-tiger-02 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.2117578977380662,
+        "score": 0.605878948869033
+      },
+      {
+        "name": "CLIP-tiger-03 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.21129159542930384,
+        "score": 0.6056457977146519
+      },
+      {
+        "name": "CLIP-tiger-07 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.21092638308194298,
+        "score": 0.6054631915409715
+      },
+      {
+        "name": "CLIP-tiger-01 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.21089476324404616,
+        "score": 0.605447381622023
+      },
+      {
+        "name": "CLIP-tiger-08 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.20974597059493058,
+        "score": 0.6048729852974652
+      },
+      {
+        "name": "CLIP-tiger-06 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.2097183998881691,
+        "score": 0.6048591999440845
+      },
+      {
+        "name": "CLIP-bicycle-08 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.20073247062880942,
+        "score": 0.6003662353144047
+      },
+      {
+        "name": "CLIP-bird-07 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.2001957892830092,
+        "score": 0.6000978946415046
+      },
+      {
+        "name": "CLIP-bicycle-04 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.20010453528119956,
+        "score": 0.6000522676405998
+      },
+      {
+        "name": "CLIP-bird-03 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.19974325555877814,
+        "score": 0.5998716277793891
+      },
+      {
+        "name": "CLIP-bird-04 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.19918353665907554,
+        "score": 0.5995917683295378
+      },
+      {
+        "name": "CLIP-bicycle-03 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.1988311302465784,
+        "score": 0.5994155651232892
+      },
+      {
+        "name": "CLIP-bicycle-09 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.1986363656276703,
+        "score": 0.5993181828138352
+      },
+      {
+        "name": "CLIP-bird-01 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.1985729193444599,
+        "score": 0.5992864596722299
+      },
+      {
+        "name": "CLIP-car-05 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.1983802044772839,
+        "score": 0.599190102238642
+      },
+      {
+        "name": "CLIP-bird-02 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.19785112079562234,
+        "score": 0.5989255603978112
+      },
+      {
+        "name": "CLIP-bicycle-10 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.1975983053891408,
+        "score": 0.5987991526945704
+      },
+      {
+        "name": "CLIP-bird-09 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.19758736670720572,
+        "score": 0.5987936833536028
+      },
+      {
+        "name": "CLIP-bicycle-07 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.19668857849678967,
+        "score": 0.5983442892483948
+      },
+      {
+        "name": "CLIP-bird-10 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.19612261265662917,
+        "score": 0.5980613063283146
+      },
+      {
+        "name": "CLIP-bird-08 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.19589379724406222,
+        "score": 0.5979468986220311
+      },
+      {
+        "name": "CLIP-bird-06 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.19584622633529386,
+        "score": 0.5979231131676469
+      },
+      {
+        "name": "CLIP-bicycle-06 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.1944958106892698,
+        "score": 0.5972479053446349
+      },
+      {
+        "name": "CLIP-bicycle-01 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.19412906132062485,
+        "score": 0.5970645306603124
+      },
+      {
+        "name": "CLIP-bicycle-02 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.19289152781458696,
+        "score": 0.5964457639072935
+      },
+      {
+        "name": "CLIP-cat-05 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.19019056781590885,
+        "score": 0.5950952839079544
+      },
+      {
+        "name": "CLIP-car-07 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.18866142440147324,
+        "score": 0.5943307122007366
+      },
+      {
+        "name": "CLIP-car-10 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.18581046685841257,
+        "score": 0.5929052334292063
+      },
+      {
+        "name": "CLIP-car-09 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.18522593273936103,
+        "score": 0.5926129663696805
+      },
+      {
+        "name": "CLIP-car-06 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.18454831903893826,
+        "score": 0.5922741595194692
+      },
+      {
+        "name": "CLIP-car-04 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.18452866175230584,
+        "score": 0.5922643308761529
+      },
+      {
+        "name": "CLIP-car-08 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.1820104326908707,
+        "score": 0.5910052163454353
+      },
+      {
+        "name": "CLIP-car-01 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.1813960804464229,
+        "score": 0.5906980402232115
+      },
+      {
+        "name": "CLIP-flower-05 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.18131923960683513,
+        "score": 0.5906596198034175
+      },
+      {
+        "name": "CLIP-car-03 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.1810173769619333,
+        "score": 0.5905086884809666
+      },
+      {
+        "name": "CLIP-cat-04 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.18065216750133248,
+        "score": 0.5903260837506662
+      },
+      {
+        "name": "CLIP-cat-09 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.17980274222187,
+        "score": 0.589901371110935
+      },
+      {
+        "name": "CLIP-car-02 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.17937548802537356,
+        "score": 0.5896877440126868
+      },
+      {
+        "name": "CLIP-cat-02 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.1778597344882896,
+        "score": 0.5889298672441448
+      },
+      {
+        "name": "CLIP-cat-01 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.17782651811554426,
+        "score": 0.5889132590577721
+      },
+      {
+        "name": "CLIP-cat-08 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.17744022205314589,
+        "score": 0.588720111026573
+      },
+      {
+        "name": "CLIP-cat-10 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.17710593525041513,
+        "score": 0.5885529676252076
+      },
+      {
+        "name": "CLIP-cat-06 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.17586923055286638,
+        "score": 0.5879346152764332
+      },
+      {
+        "name": "CLIP-cat-03 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.1755010469193929,
+        "score": 0.5877505234596965
+      },
+      {
+        "name": "CLIP-cat-07 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.17547167217812695,
+        "score": 0.5877358360890634
+      },
+      {
+        "name": "CLIP-flower-07 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.17195487138810273,
+        "score": 0.5859774356940514
+      },
+      {
+        "name": "CLIP-flower-09 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.17058508081595447,
+        "score": 0.5852925404079772
+      },
+      {
+        "name": "CLIP-flower-04 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.17007376346013087,
+        "score": 0.5850368817300654
+      },
+      {
+        "name": "CLIP-flower-08 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.16987291248988673,
+        "score": 0.5849364562449434
+      },
+      {
+        "name": "CLIP-flower-10 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.16942283800138372,
+        "score": 0.5847114190006919
+      },
+      {
+        "name": "CLIP-flower-01 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.1689767278979673,
+        "score": 0.5844883639489836
+      },
+      {
+        "name": "CLIP-flower-02 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.16747608093968672,
+        "score": 0.5837380404698433
+      },
+      {
+        "name": "CLIP-flower-03 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.16727715570576726,
+        "score": 0.5836385778528836
+      },
+      {
+        "name": "CLIP-flower-06 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.16471234940864557,
+        "score": 0.5823561747043228
+      }
+    ],
+    "bird": [
+      {
+        "name": "CLIP-bird-05 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.26556663440314127,
+        "score": 0.6327833172015707
+      },
+      {
+        "name": "CLIP-bird-07 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.2627541438854929,
+        "score": 0.6313770719427465
+      },
+      {
+        "name": "CLIP-bird-04 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.2624576980687943,
+        "score": 0.6312288490343971
+      },
+      {
+        "name": "CLIP-bird-08 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.26120190740723664,
+        "score": 0.6306009537036183
+      },
+      {
+        "name": "CLIP-bird-10 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.26085250757994133,
+        "score": 0.6304262537899706
+      },
+      {
+        "name": "CLIP-bird-03 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.26023662165563166,
+        "score": 0.6301183108278159
+      },
+      {
+        "name": "CLIP-bird-06 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.2600003135824869,
+        "score": 0.6300001567912434
+      },
+      {
+        "name": "CLIP-bird-02 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.2595463051078238,
+        "score": 0.6297731525539119
+      },
+      {
+        "name": "CLIP-bird-01 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.2594586203551416,
+        "score": 0.6297293101775708
+      },
+      {
+        "name": "CLIP-bird-09 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.2585400067053378,
+        "score": 0.6292700033526689
+      },
+      {
+        "name": "CLIP-flower-05 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.18821483597638708,
+        "score": 0.5941074179881936
+      },
+      {
+        "name": "CLIP-flower-04 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.1864162747621815,
+        "score": 0.5932081373810908
+      },
+      {
+        "name": "CLIP-flower-07 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.1860598710415122,
+        "score": 0.5930299355207561
+      },
+      {
+        "name": "CLIP-flower-02 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.18502084535713406,
+        "score": 0.592510422678567
+      },
+      {
+        "name": "CLIP-flower-08 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.18488346279024392,
+        "score": 0.592441731395122
+      },
+      {
+        "name": "CLIP-flower-10 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.18439036750525997,
+        "score": 0.59219518375263
+      },
+      {
+        "name": "CLIP-flower-03 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.1837925461906225,
+        "score": 0.5918962730953112
+      },
+      {
+        "name": "CLIP-flower-01 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.18374453647220743,
+        "score": 0.5918722682361037
+      },
+      {
+        "name": "CLIP-flower-06 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.18333850391365736,
+        "score": 0.5916692519568287
+      },
+      {
+        "name": "CLIP-flower-09 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.183187989665154,
+        "score": 0.591593994832577
+      },
+      {
+        "name": "CLIP-elephant-07 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.18192047682362836,
+        "score": 0.5909602384118142
+      },
+      {
+        "name": "CLIP-elephant-04 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.18165487340588837,
+        "score": 0.5908274367029442
+      },
+      {
+        "name": "CLIP-elephant-05 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.18106795176635623,
+        "score": 0.5905339758831781
+      },
+      {
+        "name": "CLIP-elephant-02 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.1809753274792255,
+        "score": 0.5904876637396128
+      },
+      {
+        "name": "CLIP-elephant-08 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.1808240659997643,
+        "score": 0.5904120329998821
+      },
+      {
+        "name": "CLIP-car-05 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.1804869942259943,
+        "score": 0.5902434971129972
+      },
+      {
+        "name": "CLIP-car-07 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.17923947280480454,
+        "score": 0.5896197364024023
+      },
+      {
+        "name": "CLIP-elephant-09 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.17800863083409874,
+        "score": 0.5890043154170493
+      },
+      {
+        "name": "CLIP-car-08 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.17773419527139972,
+        "score": 0.5888670976356999
+      },
+      {
+        "name": "CLIP-elephant-01 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.17770839810430636,
+        "score": 0.5888541990521532
+      },
+      {
+        "name": "CLIP-car-06 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.1775146926695888,
+        "score": 0.5887573463347944
+      },
+      {
+        "name": "CLIP-elephant-10 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.17738183628925783,
+        "score": 0.5886909181446289
+      },
+      {
+        "name": "CLIP-car-04 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.17684549551927098,
+        "score": 0.5884227477596355
+      },
+      {
+        "name": "CLIP-horse-05 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.17628389465844224,
+        "score": 0.5881419473292211
+      },
+      {
+        "name": "CLIP-elephant-03 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.1760186740969008,
+        "score": 0.5880093370484504
+      },
+      {
+        "name": "CLIP-horse-04 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.1749003842840729,
+        "score": 0.5874501921420364
+      },
+      {
+        "name": "CLIP-car-10 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.1748287404891332,
+        "score": 0.5874143702445666
+      },
+      {
+        "name": "CLIP-horse-07 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.1741174327484262,
+        "score": 0.5870587163742131
+      },
+      {
+        "name": "CLIP-car-09 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.17390629551971531,
+        "score": 0.5869531477598576
+      },
+      {
+        "name": "CLIP-elephant-06 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.17331027330997562,
+        "score": 0.5866551366549878
+      },
+      {
+        "name": "CLIP-car-01 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.17311833877659252,
+        "score": 0.5865591693882962
+      },
+      {
+        "name": "CLIP-horse-08 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.1726359652809712,
+        "score": 0.5863179826404856
+      },
+      {
+        "name": "CLIP-car-03 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.17168541318248026,
+        "score": 0.5858427065912402
+      },
+      {
+        "name": "CLIP-car-02 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.1712968645172533,
+        "score": 0.5856484322586266
+      },
+      {
+        "name": "CLIP-horse-10 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.17015761913002275,
+        "score": 0.5850788095650113
+      },
+      {
+        "name": "CLIP-horse-02 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.17002589229061835,
+        "score": 0.5850129461453092
+      },
+      {
+        "name": "CLIP-horse-01 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.16934581962290252,
+        "score": 0.5846729098114513
+      },
+      {
+        "name": "CLIP-football-08 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.16890522168360572,
+        "score": 0.5844526108418029
+      },
+      {
+        "name": "CLIP-football-06 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.16865558933729805,
+        "score": 0.584327794668649
+      },
+      {
+        "name": "CLIP-bicycle-05 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.16837533628651083,
+        "score": 0.5841876681432554
+      },
+      {
+        "name": "CLIP-football-04 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.16831289424963436,
+        "score": 0.5841564471248172
+      },
+      {
+        "name": "CLIP-horse-09 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.1681668397912907,
+        "score": 0.5840834198956454
+      },
+      {
+        "name": "CLIP-horse-06 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.1678952807605266,
+        "score": 0.5839476403802633
+      },
+      {
+        "name": "CLIP-horse-03 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.16784084626968068,
+        "score": 0.5839204231348404
+      },
+      {
+        "name": "CLIP-football-07 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.16770064373618346,
+        "score": 0.5838503218680917
+      },
+      {
+        "name": "CLIP-football-05 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.1671249673646357,
+        "score": 0.5835624836823179
+      },
+      {
+        "name": "CLIP-football-03 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.16642163537490384,
+        "score": 0.583210817687452
+      },
+      {
+        "name": "CLIP-football-09 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.16592296906302004,
+        "score": 0.58296148453151
+      },
+      {
+        "name": "CLIP-football-02 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.16480313332560037,
+        "score": 0.5824015666628002
+      },
+      {
+        "name": "CLIP-dog-05 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.16453086159282337,
+        "score": 0.5822654307964117
+      },
+      {
+        "name": "CLIP-cat-05 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.16402070628366608,
+        "score": 0.582010353141833
+      },
+      {
+        "name": "CLIP-bicycle-04 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.16377929060074362,
+        "score": 0.5818896453003718
+      },
+      {
+        "name": "CLIP-tiger-05 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.16371352938012623,
+        "score": 0.5818567646900631
+      },
+      {
+        "name": "CLIP-football-01 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.1636932460623239,
+        "score": 0.581846623031162
+      },
+      {
+        "name": "CLIP-bicycle-08 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.16141258072545964,
+        "score": 0.5807062903627298
+      },
+      {
+        "name": "CLIP-football-10 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.1613908130228464,
+        "score": 0.5806954065114232
+      },
+      {
+        "name": "CLIP-bicycle-07 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.1609425034537037,
+        "score": 0.5804712517268519
+      },
+      {
+        "name": "CLIP-cat-08 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.16038895794547114,
+        "score": 0.5801944789727356
+      },
+      {
+        "name": "CLIP-dog-04 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.16015518616614693,
+        "score": 0.5800775930830735
+      },
+      {
+        "name": "CLIP-bicycle-02 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.1597242700688299,
+        "score": 0.579862135034415
+      },
+      {
+        "name": "CLIP-bicycle-01 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.1589772969999866,
+        "score": 0.5794886484999933
+      },
+      {
+        "name": "CLIP-bicycle-06 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.1587480858586625,
+        "score": 0.5793740429293313
+      },
+      {
+        "name": "CLIP-tiger-09 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.15827725358745043,
+        "score": 0.5791386267937252
+      },
+      {
+        "name": "CLIP-dog-01 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.1581307985841331,
+        "score": 0.5790653992920666
+      },
+      {
+        "name": "CLIP-bicycle-03 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.1579274817954711,
+        "score": 0.5789637408977355
+      },
+      {
+        "name": "CLIP-dog-03 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.15760313407178939,
+        "score": 0.5788015670358947
+      },
+      {
+        "name": "CLIP-bicycle-10 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.1573987002596884,
+        "score": 0.5786993501298442
+      },
+      {
+        "name": "CLIP-dog-02 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.15727107332135207,
+        "score": 0.578635536660676
+      },
+      {
+        "name": "CLIP-dog-06 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.15725256622592526,
+        "score": 0.5786262831129626
+      },
+      {
+        "name": "CLIP-cat-04 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.15718045925655688,
+        "score": 0.5785902296282784
+      },
+      {
+        "name": "CLIP-bicycle-09 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.15693748930591764,
+        "score": 0.5784687446529588
+      },
+      {
+        "name": "CLIP-cat-01 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.15666427047368073,
+        "score": 0.5783321352368404
+      },
+      {
+        "name": "CLIP-dog-07 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.15651284378640412,
+        "score": 0.578256421893202
+      },
+      {
+        "name": "CLIP-dog-08 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.15609879908532295,
+        "score": 0.5780493995426614
+      },
+      {
+        "name": "CLIP-tiger-04 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.15601466575715306,
+        "score": 0.5780073328785765
+      },
+      {
+        "name": "CLIP-tiger-06 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.1557783415977344,
+        "score": 0.5778891707988671
+      },
+      {
+        "name": "CLIP-cat-07 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.15459911740136117,
+        "score": 0.5772995587006806
+      },
+      {
+        "name": "CLIP-cat-06 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.15428353666310116,
+        "score": 0.5771417683315506
+      },
+      {
+        "name": "CLIP-dog-09 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.15418609439443126,
+        "score": 0.5770930471972157
+      },
+      {
+        "name": "CLIP-tiger-08 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.15349559054506573,
+        "score": 0.5767477952725328
+      },
+      {
+        "name": "CLIP-cat-02 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.1533518866427722,
+        "score": 0.576675943321386
+      },
+      {
+        "name": "CLIP-tiger-01 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.15314641111241561,
+        "score": 0.5765732055562078
+      },
+      {
+        "name": "CLIP-tiger-07 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.15255413138118606,
+        "score": 0.576277065690593
+      },
+      {
+        "name": "CLIP-cat-10 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.1520235990191498,
+        "score": 0.5760117995095749
+      },
+      {
+        "name": "CLIP-tiger-10 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.1518367910594792,
+        "score": 0.5759183955297396
+      },
+      {
+        "name": "CLIP-dog-10 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.1513145877256924,
+        "score": 0.5756572938628461
+      },
+      {
+        "name": "CLIP-cat-09 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.15099552464744612,
+        "score": 0.5754977623237231
+      },
+      {
+        "name": "CLIP-cat-03 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.15097577941808993,
+        "score": 0.575487889709045
+      },
+      {
+        "name": "CLIP-tiger-03 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.15041973489107224,
+        "score": 0.5752098674455361
+      },
+      {
+        "name": "CLIP-tiger-02 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.14860818999035252,
+        "score": 0.5743040949951763
+      }
+    ],
+    "car": [
+      {
+        "name": "CLIP-car-09 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.26000023104008,
+        "score": 0.63000011552004
+      },
+      {
+        "name": "CLIP-car-04 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.25786645162316313,
+        "score": 0.6289332258115816
+      },
+      {
+        "name": "CLIP-car-05 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.2564814034208993,
+        "score": 0.6282407017104497
+      },
+      {
+        "name": "CLIP-car-08 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.2553539164282968,
+        "score": 0.6276769582141484
+      },
+      {
+        "name": "CLIP-car-07 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.2549548975244103,
+        "score": 0.6274774487622051
+      },
+      {
+        "name": "CLIP-car-03 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.25494464738541145,
+        "score": 0.6274723236927058
+      },
+      {
+        "name": "CLIP-car-06 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.25479530991582705,
+        "score": 0.6273976549579136
+      },
+      {
+        "name": "CLIP-car-01 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.25404401560643436,
+        "score": 0.6270220078032172
+      },
+      {
+        "name": "CLIP-car-10 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.25397948991023755,
+        "score": 0.6269897449551187
+      },
+      {
+        "name": "CLIP-car-02 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.25274493156733424,
+        "score": 0.6263724657836671
+      },
+      {
+        "name": "CLIP-tiger-09 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.21419926785842427,
+        "score": 0.6070996339292122
+      },
+      {
+        "name": "CLIP-tiger-04 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.2096918458551551,
+        "score": 0.6048459229275776
+      },
+      {
+        "name": "CLIP-tiger-08 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.20953027136549598,
+        "score": 0.604765135682748
+      },
+      {
+        "name": "CLIP-tiger-02 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.20912266039858982,
+        "score": 0.6045613301992949
+      },
+      {
+        "name": "CLIP-football-09 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.20881489927976202,
+        "score": 0.604407449639881
+      },
+      {
+        "name": "CLIP-tiger-01 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.20843548224640424,
+        "score": 0.6042177411232021
+      },
+      {
+        "name": "CLIP-tiger-10 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.20796792441937906,
+        "score": 0.6039839622096895
+      },
+      {
+        "name": "CLIP-football-08 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.2072734969965422,
+        "score": 0.6036367484982711
+      },
+      {
+        "name": "CLIP-tiger-07 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.20678368684133264,
+        "score": 0.6033918434206663
+      },
+      {
+        "name": "CLIP-tiger-05 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.20603251736274436,
+        "score": 0.6030162586813722
+      },
+      {
+        "name": "CLIP-football-07 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.2059548084261732,
+        "score": 0.6029774042130867
+      },
+      {
+        "name": "CLIP-football-06 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.20542744791205433,
+        "score": 0.6027137239560272
+      },
+      {
+        "name": "CLIP-tiger-03 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.20467143040539382,
+        "score": 0.6023357152026969
+      },
+      {
+        "name": "CLIP-football-02 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.2043514555280984,
+        "score": 0.6021757277640492
+      },
+      {
+        "name": "CLIP-football-04 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.2043259362431462,
+        "score": 0.6021629681215731
+      },
+      {
+        "name": "CLIP-tiger-06 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.20426320414233587,
+        "score": 0.6021316020711679
+      },
+      {
+        "name": "CLIP-bicycle-05 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.2040178737870531,
+        "score": 0.6020089368935265
+      },
+      {
+        "name": "CLIP-football-03 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.20204130601984163,
+        "score": 0.6010206530099208
+      },
+      {
+        "name": "CLIP-football-01 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.20182575389542923,
+        "score": 0.6009128769477146
+      },
+      {
+        "name": "CLIP-football-10 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.20181503413480062,
+        "score": 0.6009075170674003
+      },
+      {
+        "name": "CLIP-bicycle-09 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.20099506423228636,
+        "score": 0.6004975321161432
+      },
+      {
+        "name": "CLIP-football-05 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.20058641307783487,
+        "score": 0.6002932065389175
+      },
+      {
+        "name": "CLIP-bicycle-07 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.20014149275183357,
+        "score": 0.6000707463759167
+      },
+      {
+        "name": "CLIP-horse-04 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.1998261773314885,
+        "score": 0.5999130886657442
+      },
+      {
+        "name": "CLIP-bicycle-04 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.1997713851747417,
+        "score": 0.5998856925873708
+      },
+      {
+        "name": "CLIP-horse-05 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.19911436081576928,
+        "score": 0.5995571804078846
+      },
+      {
+        "name": "CLIP-horse-08 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.19904514346633775,
+        "score": 0.5995225717331689
+      },
+      {
+        "name": "CLIP-horse-09 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.19825683190225799,
+        "score": 0.599128415951129
+      },
+      {
+        "name": "CLIP-bicycle-08 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.19809242517826467,
+        "score": 0.5990462125891324
+      },
+      {
+        "name": "CLIP-horse-07 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.1977762968168864,
+        "score": 0.5988881484084432
+      },
+      {
+        "name": "CLIP-horse-10 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.1970893179606365,
+        "score": 0.5985446589803183
+      },
+      {
+        "name": "CLIP-bicycle-10 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.1968006324651318,
+        "score": 0.598400316232566
+      },
+      {
+        "name": "CLIP-horse-02 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.19609124553251364,
+        "score": 0.5980456227662568
+      },
+      {
+        "name": "CLIP-bicycle-03 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.19604864910021041,
+        "score": 0.5980243245501052
+      },
+      {
+        "name": "CLIP-bicycle-02 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.19501937432714236,
+        "score": 0.5975096871635712
+      },
+      {
+        "name": "CLIP-flower-04 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.19474588677676546,
+        "score": 0.5973729433883828
+      },
+      {
+        "name": "CLIP-horse-01 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.19428610049908887,
+        "score": 0.5971430502495444
+      },
+      {
+        "name": "CLIP-bicycle-01 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.19422792254248467,
+        "score": 0.5971139612712424
+      },
+      {
+        "name": "CLIP-flower-07 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.19324483494841319,
+        "score": 0.5966224174742066
+      },
+      {
+        "name": "CLIP-flower-09 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.19306435990225138,
+        "score": 0.5965321799511257
+      },
+      {
+        "name": "CLIP-bicycle-06 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.19196056090372096,
+        "score": 0.5959802804518605
+      },
+      {
+        "name": "CLIP-flower-01 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.19159833570619533,
+        "score": 0.5957991678530976
+      },
+      {
+        "name": "CLIP-flower-02 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.19152114777240808,
+        "score": 0.5957605738862041
+      },
+      {
+        "name": "CLIP-flower-05 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.18999503978238544,
+        "score": 0.5949975198911928
+      },
+      {
+        "name": "CLIP-horse-03 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.18993445454234184,
+        "score": 0.5949672272711709
+      },
+      {
+        "name": "CLIP-horse-06 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.18956959513603464,
+        "score": 0.5947847975680173
+      },
+      {
+        "name": "CLIP-flower-10 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.18807730017416202,
+        "score": 0.594038650087081
+      },
+      {
+        "name": "CLIP-bird-09 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.18772902328087213,
+        "score": 0.5938645116404361
+      },
+      {
+        "name": "CLIP-bird-02 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.1874654757220507,
+        "score": 0.5937327378610253
+      },
+      {
+        "name": "CLIP-flower-08 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.18740924757404923,
+        "score": 0.5937046237870246
+      },
+      {
+        "name": "CLIP-flower-03 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.18699883675862955,
+        "score": 0.5934994183793147
+      },
+      {
+        "name": "CLIP-bird-04 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.1868415515668503,
+        "score": 0.5934207757834251
+      },
+      {
+        "name": "CLIP-bird-01 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.1853805363978279,
+        "score": 0.5926902681989139
+      },
+      {
+        "name": "CLIP-bird-05 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.18451143876539444,
+        "score": 0.5922557193826972
+      },
+      {
+        "name": "CLIP-bird-08 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.18424312032303317,
+        "score": 0.5921215601615166
+      },
+      {
+        "name": "CLIP-bird-07 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.18423812747322135,
+        "score": 0.5921190637366107
+      },
+      {
+        "name": "CLIP-flower-06 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.18400641680630092,
+        "score": 0.5920032084031505
+      },
+      {
+        "name": "CLIP-elephant-09 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.1836223990044833,
+        "score": 0.5918111995022417
+      },
+      {
+        "name": "CLIP-elephant-02 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.18279228320709526,
+        "score": 0.5913961416035476
+      },
+      {
+        "name": "CLIP-elephant-07 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.18276519821607584,
+        "score": 0.5913825991080379
+      },
+      {
+        "name": "CLIP-elephant-04 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.18225871464114776,
+        "score": 0.5911293573205739
+      },
+      {
+        "name": "CLIP-bird-10 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.18183320102875736,
+        "score": 0.5909166005143787
+      },
+      {
+        "name": "CLIP-bird-03 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.181085284237607,
+        "score": 0.5905426421188035
+      },
+      {
+        "name": "CLIP-elephant-08 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.18074323261311234,
+        "score": 0.5903716163065562
+      },
+      {
+        "name": "CLIP-bird-06 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.17951559023050595,
+        "score": 0.589757795115253
+      },
+      {
+        "name": "CLIP-cat-09 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.17936193736421396,
+        "score": 0.589680968682107
+      },
+      {
+        "name": "CLIP-cat-05 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.17922865866295976,
+        "score": 0.5896143293314798
+      },
+      {
+        "name": "CLIP-elephant-10 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.1787408016272529,
+        "score": 0.5893704008136265
+      },
+      {
+        "name": "CLIP-elephant-05 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.17836381571274704,
+        "score": 0.5891819078563735
+      },
+      {
+        "name": "CLIP-elephant-01 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.17824435495610838,
+        "score": 0.5891221774780542
+      },
+      {
+        "name": "CLIP-cat-04 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.1777160528809904,
+        "score": 0.5888580264404952
+      },
+      {
+        "name": "CLIP-cat-08 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.17751775577006101,
+        "score": 0.5887588778850306
+      },
+      {
+        "name": "CLIP-cat-02 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.17665494046120434,
+        "score": 0.5883274702306022
+      },
+      {
+        "name": "CLIP-elephant-03 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.17635661277707734,
+        "score": 0.5881783063885386
+      },
+      {
+        "name": "CLIP-cat-01 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.17618800038277205,
+        "score": 0.588094000191386
+      },
+      {
+        "name": "CLIP-dog-05 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.1754717922113491,
+        "score": 0.5877358961056746
+      },
+      {
+        "name": "CLIP-cat-10 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.17496899145561676,
+        "score": 0.5874844957278084
+      },
+      {
+        "name": "CLIP-elephant-06 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.17364619946637463,
+        "score": 0.5868230997331874
+      },
+      {
+        "name": "CLIP-dog-01 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.1728401433517247,
+        "score": 0.5864200716758623
+      },
+      {
+        "name": "CLIP-dog-09 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.17236235283905327,
+        "score": 0.5861811764195266
+      },
+      {
+        "name": "CLIP-dog-04 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.17188097576566397,
+        "score": 0.585940487882832
+      },
+      {
+        "name": "CLIP-cat-03 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.17153655012691302,
+        "score": 0.5857682750634565
+      },
+      {
+        "name": "CLIP-cat-06 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.17138844209837767,
+        "score": 0.5856942210491889
+      },
+      {
+        "name": "CLIP-cat-07 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.17136579812862188,
+        "score": 0.5856828990643109
+      },
+      {
+        "name": "CLIP-dog-08 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.17060572422947987,
+        "score": 0.5853028621147399
+      },
+      {
+        "name": "CLIP-dog-02 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.1703274635109662,
+        "score": 0.5851637317554831
+      },
+      {
+        "name": "CLIP-dog-10 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.16997058232322726,
+        "score": 0.5849852911616136
+      },
+      {
+        "name": "CLIP-dog-07 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.16916608171279066,
+        "score": 0.5845830408563953
+      },
+      {
+        "name": "CLIP-dog-03 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.16719049026699365,
+        "score": 0.5835952451334968
+      },
+      {
+        "name": "CLIP-dog-06 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.16470665605398743,
+        "score": 0.5823533280269937
+      }
+    ],
+    "bicycle": [
+      {
+        "name": "CLIP-bicycle-05 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.29280220653090394,
+        "score": 0.646401103265452
+      },
+      {
+        "name": "CLIP-bicycle-02 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.29164599778522354,
+        "score": 0.6458229988926117
+      },
+      {
+        "name": "CLIP-bicycle-01 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.2898669278938777,
+        "score": 0.6449334639469388
+      },
+      {
+        "name": "CLIP-bicycle-09 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.2898263880042425,
+        "score": 0.6449131940021212
+      },
+      {
+        "name": "CLIP-bicycle-04 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.2893999085936696,
+        "score": 0.6446999542968348
+      },
+      {
+        "name": "CLIP-bicycle-10 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.2892259155881768,
+        "score": 0.6446129577940884
+      },
+      {
+        "name": "CLIP-bicycle-03 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.288690470542523,
+        "score": 0.6443452352712615
+      },
+      {
+        "name": "CLIP-bicycle-08 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.28602334388821254,
+        "score": 0.6430116719441062
+      },
+      {
+        "name": "CLIP-bicycle-07 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.28377663145762383,
+        "score": 0.6418883157288119
+      },
+      {
+        "name": "CLIP-bicycle-06 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.2827327171960144,
+        "score": 0.6413663585980072
+      },
+      {
+        "name": "CLIP-bird-05 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.24194990083187604,
+        "score": 0.620974950415938
+      },
+      {
+        "name": "CLIP-bird-09 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.23909171114655742,
+        "score": 0.6195458555732787
+      },
+      {
+        "name": "CLIP-bird-02 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.23801341071808568,
+        "score": 0.6190067053590429
+      },
+      {
+        "name": "CLIP-bird-01 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.23383808541083764,
+        "score": 0.6169190427054189
+      },
+      {
+        "name": "CLIP-bird-08 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.23265236554720484,
+        "score": 0.6163261827736024
+      },
+      {
+        "name": "CLIP-bird-04 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.232053638039036,
+        "score": 0.616026819019518
+      },
+      {
+        "name": "CLIP-bird-10 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.2319713313823307,
+        "score": 0.6159856656911653
+      },
+      {
+        "name": "CLIP-bird-03 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.2310823779722657,
+        "score": 0.6155411889861329
+      },
+      {
+        "name": "CLIP-horse-05 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.23098885959843174,
+        "score": 0.6154944297992159
+      },
+      {
+        "name": "CLIP-bird-06 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.2309687071946956,
+        "score": 0.6154843535973478
+      },
+      {
+        "name": "CLIP-car-05 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.22686456608315989,
+        "score": 0.6134322830415799
+      },
+      {
+        "name": "CLIP-car-09 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.22608097454616857,
+        "score": 0.6130404872730842
+      },
+      {
+        "name": "CLIP-bird-07 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.2253518577748963,
+        "score": 0.6126759288874482
+      },
+      {
+        "name": "CLIP-horse-02 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.22365482066689418,
+        "score": 0.6118274103334471
+      },
+      {
+        "name": "CLIP-horse-10 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.22355584904868403,
+        "score": 0.611777924524342
+      },
+      {
+        "name": "CLIP-horse-09 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.22343349139575783,
+        "score": 0.6117167456978789
+      },
+      {
+        "name": "CLIP-car-02 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.22261462795787135,
+        "score": 0.6113073139789357
+      },
+      {
+        "name": "CLIP-car-10 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.2225231358613832,
+        "score": 0.6112615679306916
+      },
+      {
+        "name": "CLIP-car-04 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.22228144900482327,
+        "score": 0.6111407245024116
+      },
+      {
+        "name": "CLIP-horse-04 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.22183384167065537,
+        "score": 0.6109169208353277
+      },
+      {
+        "name": "CLIP-car-06 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.2210093779324398,
+        "score": 0.6105046889662199
+      },
+      {
+        "name": "CLIP-car-03 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.22033539034413652,
+        "score": 0.6101676951720683
+      },
+      {
+        "name": "CLIP-horse-08 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.21954548067082816,
+        "score": 0.6097727403354141
+      },
+      {
+        "name": "CLIP-horse-03 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.21933769421684463,
+        "score": 0.6096688471084223
+      },
+      {
+        "name": "CLIP-car-01 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.2192749499994648,
+        "score": 0.6096374749997324
+      },
+      {
+        "name": "CLIP-horse-01 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.2184925954119054,
+        "score": 0.6092462977059527
+      },
+      {
+        "name": "CLIP-horse-07 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.21654880320760414,
+        "score": 0.6082744016038021
+      },
+      {
+        "name": "CLIP-horse-06 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.2160646179214423,
+        "score": 0.6080323089607211
+      },
+      {
+        "name": "CLIP-car-07 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.2155856941140525,
+        "score": 0.6077928470570263
+      },
+      {
+        "name": "CLIP-car-08 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.21438108893935742,
+        "score": 0.6071905444696787
+      },
+      {
+        "name": "CLIP-dog-05 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.1972942386214694,
+        "score": 0.5986471193107347
+      },
+      {
+        "name": "CLIP-flower-05 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.1964166419083187,
+        "score": 0.5982083209541593
+      },
+      {
+        "name": "CLIP-dog-02 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.19295755941983095,
+        "score": 0.5964787797099155
+      },
+      {
+        "name": "CLIP-cat-05 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.19216356745755558,
+        "score": 0.5960817837287777
+      },
+      {
+        "name": "CLIP-dog-09 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.19132139784023738,
+        "score": 0.5956606989201187
+      },
+      {
+        "name": "CLIP-flower-09 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.19084781693723085,
+        "score": 0.5954239084686155
+      },
+      {
+        "name": "CLIP-dog-01 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.18983189434875855,
+        "score": 0.5949159471743792
+      },
+      {
+        "name": "CLIP-flower-01 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.189610627204888,
+        "score": 0.594805313602444
+      },
+      {
+        "name": "CLIP-dog-03 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.18899686774358276,
+        "score": 0.5944984338717914
+      },
+      {
+        "name": "CLIP-dog-04 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.18873873797663357,
+        "score": 0.5943693689883168
+      },
+      {
+        "name": "CLIP-flower-02 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.18864577065697824,
+        "score": 0.5943228853284891
+      },
+      {
+        "name": "CLIP-dog-10 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.18830914988646075,
+        "score": 0.5941545749432304
+      },
+      {
+        "name": "CLIP-tiger-05 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.18622050727003098,
+        "score": 0.5931102536350155
+      },
+      {
+        "name": "CLIP-dog-06 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.18515056310336767,
+        "score": 0.5925752815516838
+      },
+      {
+        "name": "CLIP-cat-01 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.18475142919251591,
+        "score": 0.5923757145962579
+      },
+      {
+        "name": "CLIP-flower-10 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.18351224825193024,
+        "score": 0.5917561241259651
+      },
+      {
+        "name": "CLIP-cat-02 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.18344068401776756,
+        "score": 0.5917203420088838
+      },
+      {
+        "name": "CLIP-flower-03 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.18322083001371542,
+        "score": 0.5916104150068577
+      },
+      {
+        "name": "CLIP-elephant-05 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.1830705139897436,
+        "score": 0.5915352569948717
+      },
+      {
+        "name": "CLIP-football-09 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.18269929429719925,
+        "score": 0.5913496471485996
+      },
+      {
+        "name": "CLIP-tiger-09 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.18262508558630045,
+        "score": 0.5913125427931503
+      },
+      {
+        "name": "CLIP-dog-08 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.18256466479050054,
+        "score": 0.5912823323952503
+      },
+      {
+        "name": "CLIP-football-05 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.18220666142849934,
+        "score": 0.5911033307142497
+      },
+      {
+        "name": "CLIP-cat-09 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.18214615190799532,
+        "score": 0.5910730759539977
+      },
+      {
+        "name": "CLIP-flower-04 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.1816403890037624,
+        "score": 0.5908201945018812
+      },
+      {
+        "name": "CLIP-cat-04 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.1812597502257996,
+        "score": 0.5906298751128998
+      },
+      {
+        "name": "CLIP-tiger-02 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.18117110992106442,
+        "score": 0.5905855549605322
+      },
+      {
+        "name": "CLIP-football-01 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.18096231376219168,
+        "score": 0.5904811568810958
+      },
+      {
+        "name": "CLIP-dog-07 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.18091055626299227,
+        "score": 0.5904552781314961
+      },
+      {
+        "name": "CLIP-flower-07 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.18080740389826577,
+        "score": 0.5904037019491328
+      },
+      {
+        "name": "CLIP-cat-10 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.18076243890552485,
+        "score": 0.5903812194527625
+      },
+      {
+        "name": "CLIP-football-06 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.1806491255077375,
+        "score": 0.5903245627538688
+      },
+      {
+        "name": "CLIP-cat-03 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.1804406421657039,
+        "score": 0.5902203210828519
+      },
+      {
+        "name": "CLIP-flower-06 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.18037837823059094,
+        "score": 0.5901891891152955
+      },
+      {
+        "name": "CLIP-flower-08 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.17965756213122158,
+        "score": 0.5898287810656108
+      },
+      {
+        "name": "CLIP-tiger-10 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.17964953126784086,
+        "score": 0.5898247656339204
+      },
+      {
+        "name": "CLIP-elephant-09 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.17961186917034447,
+        "score": 0.5898059345851723
+      },
+      {
+        "name": "CLIP-tiger-08 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.17934703476192637,
+        "score": 0.5896735173809632
+      },
+      {
+        "name": "CLIP-football-04 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.1791628277449235,
+        "score": 0.5895814138724618
+      },
+      {
+        "name": "CLIP-football-03 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.17857320315639377,
+        "score": 0.5892866015781969
+      },
+      {
+        "name": "CLIP-cat-06 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.17836565992119208,
+        "score": 0.589182829960596
+      },
+      {
+        "name": "CLIP-tiger-01 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.17816544342511212,
+        "score": 0.589082721712556
+      },
+      {
+        "name": "CLIP-cat-08 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.17780664618993097,
+        "score": 0.5889033230949655
+      },
+      {
+        "name": "CLIP-tiger-04 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.17750992196932325,
+        "score": 0.5887549609846616
+      },
+      {
+        "name": "CLIP-football-02 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.17732111376751566,
+        "score": 0.5886605568837578
+      },
+      {
+        "name": "CLIP-football-07 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.17727319530990857,
+        "score": 0.5886365976549542
+      },
+      {
+        "name": "CLIP-elephant-02 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.1772576242774768,
+        "score": 0.5886288121387384
+      },
+      {
+        "name": "CLIP-tiger-03 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.17686124058410152,
+        "score": 0.5884306202920507
+      },
+      {
+        "name": "CLIP-football-10 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.17632608724264257,
+        "score": 0.5881630436213213
+      },
+      {
+        "name": "CLIP-tiger-06 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.17507023017467774,
+        "score": 0.5875351150873389
+      },
+      {
+        "name": "CLIP-elephant-01 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.1744601702294175,
+        "score": 0.5872300851147088
+      },
+      {
+        "name": "CLIP-cat-07 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.17435997925857916,
+        "score": 0.5871799896292895
+      },
+      {
+        "name": "CLIP-elephant-10 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.1732530273618888,
+        "score": 0.5866265136809444
+      },
+      {
+        "name": "CLIP-football-08 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.17249461093803456,
+        "score": 0.5862473054690173
+      },
+      {
+        "name": "CLIP-elephant-04 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.17244382467377847,
+        "score": 0.5862219123368893
+      },
+      {
+        "name": "CLIP-elephant-07 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.17200376135320594,
+        "score": 0.586001880676603
+      },
+      {
+        "name": "CLIP-elephant-08 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.17193699133390636,
+        "score": 0.5859684956669532
+      },
+      {
+        "name": "CLIP-elephant-03 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.17168557230450013,
+        "score": 0.58584278615225
+      },
+      {
+        "name": "CLIP-tiger-07 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.17135656165107643,
+        "score": 0.5856782808255382
+      },
+      {
+        "name": "CLIP-elephant-06 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.1687984103300385,
+        "score": 0.5843992051650193
+      }
+    ],
+    "flower": [
+      {
+        "name": "CLIP-flower-05 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.2728359545488571,
+        "score": 0.6364179772744285
+      },
+      {
+        "name": "CLIP-flower-04 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.26773008666048914,
+        "score": 0.6338650433302446
+      },
+      {
+        "name": "CLIP-flower-08 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.267461963852181,
+        "score": 0.6337309819260906
+      },
+      {
+        "name": "CLIP-flower-02 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.266381423307846,
+        "score": 0.633190711653923
+      },
+      {
+        "name": "CLIP-flower-03 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.26614318075203014,
+        "score": 0.6330715903760151
+      },
+      {
+        "name": "CLIP-flower-10 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.26602692206121115,
+        "score": 0.6330134610306055
+      },
+      {
+        "name": "CLIP-flower-01 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.2647639049938231,
+        "score": 0.6323819524969115
+      },
+      {
+        "name": "CLIP-flower-06 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.2641630584660148,
+        "score": 0.6320815292330074
+      },
+      {
+        "name": "CLIP-flower-09 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.2640260827582202,
+        "score": 0.6320130413791101
+      },
+      {
+        "name": "CLIP-flower-07 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.25959996054742634,
+        "score": 0.6297999802737132
+      },
+      {
+        "name": "CLIP-dog-05 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.2386412378868176,
+        "score": 0.6193206189434088
+      },
+      {
+        "name": "CLIP-dog-02 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.2350043876447178,
+        "score": 0.6175021938223589
+      },
+      {
+        "name": "CLIP-dog-03 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.23394951521768478,
+        "score": 0.6169747576088424
+      },
+      {
+        "name": "CLIP-dog-04 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.23384722135574237,
+        "score": 0.6169236106778712
+      },
+      {
+        "name": "CLIP-dog-10 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.23379292556693806,
+        "score": 0.616896462783469
+      },
+      {
+        "name": "CLIP-dog-09 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.23359302393069734,
+        "score": 0.6167965119653487
+      },
+      {
+        "name": "CLIP-dog-01 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.23337796269881342,
+        "score": 0.6166889813494068
+      },
+      {
+        "name": "CLIP-dog-08 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.23102590722504607,
+        "score": 0.615512953612523
+      },
+      {
+        "name": "CLIP-dog-06 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.23011250428200006,
+        "score": 0.615056252141
+      },
+      {
+        "name": "CLIP-elephant-02 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.22958703060087352,
+        "score": 0.6147935153004368
+      },
+      {
+        "name": "CLIP-elephant-04 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.22955701019363164,
+        "score": 0.6147785050968159
+      },
+      {
+        "name": "CLIP-elephant-08 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.22782679203182876,
+        "score": 0.6139133960159144
+      },
+      {
+        "name": "CLIP-elephant-10 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.22624931143324004,
+        "score": 0.61312465571662
+      },
+      {
+        "name": "CLIP-dog-07 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.22607448817328749,
+        "score": 0.6130372440866437
+      },
+      {
+        "name": "CLIP-elephant-05 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.22599804956804911,
+        "score": 0.6129990247840246
+      },
+      {
+        "name": "CLIP-elephant-01 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.22554374962890014,
+        "score": 0.6127718748144501
+      },
+      {
+        "name": "CLIP-elephant-09 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.22508083337788728,
+        "score": 0.6125404166889437
+      },
+      {
+        "name": "CLIP-elephant-03 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.2247169591657465,
+        "score": 0.6123584795828733
+      },
+      {
+        "name": "CLIP-horse-05 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.22443859980490707,
+        "score": 0.6122192999024535
+      },
+      {
+        "name": "CLIP-bird-05 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.22384451875038988,
+        "score": 0.611922259375195
+      },
+      {
+        "name": "CLIP-horse-04 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.22382421317620171,
+        "score": 0.6119121065881008
+      },
+      {
+        "name": "CLIP-horse-08 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.22297261789026518,
+        "score": 0.6114863089451326
+      },
+      {
+        "name": "CLIP-horse-10 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.22206194206938354,
+        "score": 0.6110309710346917
+      },
+      {
+        "name": "CLIP-horse-02 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.22177904057661513,
+        "score": 0.6108895202883076
+      },
+      {
+        "name": "CLIP-horse-03 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.220478893654213,
+        "score": 0.6102394468271065
+      },
+      {
+        "name": "CLIP-elephant-07 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.22019927032002684,
+        "score": 0.6100996351600134
+      },
+      {
+        "name": "CLIP-elephant-06 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.21874421706444203,
+        "score": 0.609372108532221
+      },
+      {
+        "name": "CLIP-bird-02 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.21867047889753238,
+        "score": 0.6093352394487662
+      },
+      {
+        "name": "CLIP-bird-03 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.21863908375877872,
+        "score": 0.6093195418793893
+      },
+      {
+        "name": "CLIP-horse-01 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.21827705379308215,
+        "score": 0.609138526896541
+      },
+      {
+        "name": "CLIP-bird-04 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.21698802294872171,
+        "score": 0.6084940114743609
+      },
+      {
+        "name": "CLIP-bird-01 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.21690566985396137,
+        "score": 0.6084528349269807
+      },
+      {
+        "name": "CLIP-horse-09 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.2167444184218459,
+        "score": 0.6083722092109229
+      },
+      {
+        "name": "CLIP-horse-06 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.21567206935006478,
+        "score": 0.6078360346750324
+      },
+      {
+        "name": "CLIP-bicycle-05 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.21485221234338447,
+        "score": 0.6074261061716922
+      },
+      {
+        "name": "CLIP-horse-07 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.21458816327209132,
+        "score": 0.6072940816360457
+      },
+      {
+        "name": "CLIP-bird-06 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.21408491554081444,
+        "score": 0.6070424577704072
+      },
+      {
+        "name": "CLIP-bird-08 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.21325481977976332,
+        "score": 0.6066274098898816
+      },
+      {
+        "name": "CLIP-bird-10 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.21137571979715591,
+        "score": 0.605687859898578
+      },
+      {
+        "name": "CLIP-bicycle-03 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.21035163663273673,
+        "score": 0.6051758183163684
+      },
+      {
+        "name": "CLIP-bicycle-04 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.20979583497609267,
+        "score": 0.6048979174880463
+      },
+      {
+        "name": "CLIP-bicycle-08 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.20859466177670968,
+        "score": 0.6042973308883548
+      },
+      {
+        "name": "CLIP-football-01 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.20765053187739402,
+        "score": 0.603825265938697
+      },
+      {
+        "name": "CLIP-football-09 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.2073766130448794,
+        "score": 0.6036883065224397
+      },
+      {
+        "name": "CLIP-football-03 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.2070261651729425,
+        "score": 0.6035130825864713
+      },
+      {
+        "name": "CLIP-bird-09 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.20662896771440104,
+        "score": 0.6033144838572005
+      },
+      {
+        "name": "CLIP-bicycle-10 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.20632868175130545,
+        "score": 0.6031643408756527
+      },
+      {
+        "name": "CLIP-football-06 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.20628653338646394,
+        "score": 0.6031432666932319
+      },
+      {
+        "name": "CLIP-football-07 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.2059018574354656,
+        "score": 0.6029509287177328
+      },
+      {
+        "name": "CLIP-bird-07 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.20534657581855476,
+        "score": 0.6026732879092773
+      },
+      {
+        "name": "CLIP-football-02 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.20499090979223733,
+        "score": 0.6024954548961187
+      },
+      {
+        "name": "CLIP-football-10 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.20460811986707647,
+        "score": 0.6023040599335382
+      },
+      {
+        "name": "CLIP-football-04 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.2045824055387114,
+        "score": 0.6022912027693557
+      },
+      {
+        "name": "CLIP-bicycle-02 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.2044771972039219,
+        "score": 0.6022385986019609
+      },
+      {
+        "name": "CLIP-bicycle-06 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.2044711783288069,
+        "score": 0.6022355891644035
+      },
+      {
+        "name": "CLIP-football-08 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.20417897671377963,
+        "score": 0.6020894883568898
+      },
+      {
+        "name": "CLIP-bicycle-09 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.2039947634463204,
+        "score": 0.6019973817231602
+      },
+      {
+        "name": "CLIP-bicycle-01 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.2032479836364131,
+        "score": 0.6016239918182066
+      },
+      {
+        "name": "CLIP-bicycle-07 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.20156947096720831,
+        "score": 0.6007847354836041
+      },
+      {
+        "name": "CLIP-football-05 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.20095744419956646,
+        "score": 0.6004787220997833
+      },
+      {
+        "name": "CLIP-car-05 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.2002256694410629,
+        "score": 0.6001128347205315
+      },
+      {
+        "name": "CLIP-cat-05 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.19611818839983144,
+        "score": 0.5980590941999158
+      },
+      {
+        "name": "CLIP-tiger-05 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.1956358839402528,
+        "score": 0.5978179419701264
+      },
+      {
+        "name": "CLIP-car-10 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.1952474242762029,
+        "score": 0.5976237121381014
+      },
+      {
+        "name": "CLIP-car-04 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.1937558501541825,
+        "score": 0.5968779250770913
+      },
+      {
+        "name": "CLIP-car-03 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.19260686697224172,
+        "score": 0.5963034334861208
+      },
+      {
+        "name": "CLIP-car-02 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.19198927648466518,
+        "score": 0.5959946382423326
+      },
+      {
+        "name": "CLIP-tiger-09 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.19188195399593483,
+        "score": 0.5959409769979674
+      },
+      {
+        "name": "CLIP-car-01 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.19143621831732086,
+        "score": 0.5957181091586604
+      },
+      {
+        "name": "CLIP-car-07 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.19121613004100668,
+        "score": 0.5956080650205033
+      },
+      {
+        "name": "CLIP-tiger-04 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.19121321182478165,
+        "score": 0.5956066059123908
+      },
+      {
+        "name": "CLIP-tiger-08 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.19104055434406264,
+        "score": 0.5955202771720314
+      },
+      {
+        "name": "CLIP-car-09 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.19071047053412105,
+        "score": 0.5953552352670606
+      },
+      {
+        "name": "CLIP-cat-04 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.19058338557381502,
+        "score": 0.5952916927869075
+      },
+      {
+        "name": "CLIP-tiger-03 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.19056661094843844,
+        "score": 0.5952833054742193
+      },
+      {
+        "name": "CLIP-tiger-10 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.19038741097513764,
+        "score": 0.5951937054875688
+      },
+      {
+        "name": "CLIP-tiger-02 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.19037868823933723,
+        "score": 0.5951893441196686
+      },
+      {
+        "name": "CLIP-car-08 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.19025687326742632,
+        "score": 0.5951284366337132
+      },
+      {
+        "name": "CLIP-car-06 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.19006641752988818,
+        "score": 0.5950332087649441
+      },
+      {
+        "name": "CLIP-cat-03 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.18920505509878485,
+        "score": 0.5946025275493925
+      },
+      {
+        "name": "CLIP-cat-01 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.18914036520566982,
+        "score": 0.5945701826028349
+      },
+      {
+        "name": "CLIP-cat-02 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.18788756349120023,
+        "score": 0.5939437817456001
+      },
+      {
+        "name": "CLIP-tiger-06 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.18733153742200917,
+        "score": 0.5936657687110046
+      },
+      {
+        "name": "CLIP-tiger-01 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.18698007246694173,
+        "score": 0.5934900362334709
+      },
+      {
+        "name": "CLIP-cat-08 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.1846933643224584,
+        "score": 0.5923466821612292
+      },
+      {
+        "name": "CLIP-cat-10 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.18425287910170024,
+        "score": 0.5921264395508501
+      },
+      {
+        "name": "CLIP-cat-06 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.18384660906646283,
+        "score": 0.5919233045332314
+      },
+      {
+        "name": "CLIP-cat-09 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.1830199268043553,
+        "score": 0.5915099634021777
+      },
+      {
+        "name": "CLIP-tiger-07 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.1806444826401898,
+        "score": 0.5903222413200949
+      },
+      {
+        "name": "CLIP-cat-07 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.1790970325549862,
+        "score": 0.5895485162774932
+      }
+    ],
+    "football": [
+      {
+        "name": "CLIP-football-07 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.2345546670340556,
+        "score": 0.6172773335170278
+      },
+      {
+        "name": "CLIP-football-05 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.23278506734950258,
+        "score": 0.6163925336747513
+      },
+      {
+        "name": "CLIP-football-04 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.23247591350099195,
+        "score": 0.616237956750496
+      },
+      {
+        "name": "CLIP-football-02 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.23236402945212237,
+        "score": 0.6161820147260612
+      },
+      {
+        "name": "CLIP-football-10 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.23226104393828284,
+        "score": 0.6161305219691414
+      },
+      {
+        "name": "CLIP-football-08 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.23072383727153206,
+        "score": 0.6153619186357661
+      },
+      {
+        "name": "CLIP-football-01 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.23021784689281607,
+        "score": 0.615108923446408
+      },
+      {
+        "name": "CLIP-football-03 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.22830739341108333,
+        "score": 0.6141536967055417
+      },
+      {
+        "name": "CLIP-football-06 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.22727602002454328,
+        "score": 0.6136380100122716
+      },
+      {
+        "name": "CLIP-football-09 · Облачный ИИ: Футбол",
+        "category": "football",
+        "cosine": 0.22482382443061202,
+        "score": 0.612411912215306
+      },
+      {
+        "name": "CLIP-dog-07 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.1800450087392571,
+        "score": 0.5900225043696286
+      },
+      {
+        "name": "CLIP-car-07 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.17752626169409377,
+        "score": 0.5887631308470469
+      },
+      {
+        "name": "CLIP-dog-05 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.17708705649984327,
+        "score": 0.5885435282499216
+      },
+      {
+        "name": "CLIP-dog-08 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.17576936861224365,
+        "score": 0.5878846843061218
+      },
+      {
+        "name": "CLIP-dog-04 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.17394229785209356,
+        "score": 0.5869711489260467
+      },
+      {
+        "name": "CLIP-dog-10 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.17380359728204914,
+        "score": 0.5869017986410245
+      },
+      {
+        "name": "CLIP-car-05 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.17357734298053118,
+        "score": 0.5867886714902656
+      },
+      {
+        "name": "CLIP-dog-02 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.17338228267188857,
+        "score": 0.5866911413359442
+      },
+      {
+        "name": "CLIP-tiger-07 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.1724990151209269,
+        "score": 0.5862495075604635
+      },
+      {
+        "name": "CLIP-car-10 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.17240511702442463,
+        "score": 0.5862025585122124
+      },
+      {
+        "name": "CLIP-car-08 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.17229751357424422,
+        "score": 0.5861487567871221
+      },
+      {
+        "name": "CLIP-tiger-01 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.17155849093174386,
+        "score": 0.5857792454658719
+      },
+      {
+        "name": "CLIP-dog-01 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.1714141885069234,
+        "score": 0.5857070942534617
+      },
+      {
+        "name": "CLIP-car-01 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.17127715612737232,
+        "score": 0.5856385780636861
+      },
+      {
+        "name": "CLIP-horse-07 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.1712263044244576,
+        "score": 0.5856131522122288
+      },
+      {
+        "name": "CLIP-dog-09 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.1698060651531842,
+        "score": 0.584903032576592
+      },
+      {
+        "name": "CLIP-tiger-02 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.1696957070083721,
+        "score": 0.5848478535041861
+      },
+      {
+        "name": "CLIP-bird-07 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.16932259141954628,
+        "score": 0.5846612957097731
+      },
+      {
+        "name": "CLIP-dog-03 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.16826230593204283,
+        "score": 0.5841311529660214
+      },
+      {
+        "name": "CLIP-car-04 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.16810729051523088,
+        "score": 0.5840536452576155
+      },
+      {
+        "name": "CLIP-horse-10 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.16782633037859565,
+        "score": 0.5839131651892978
+      },
+      {
+        "name": "CLIP-tiger-08 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.16767182327575164,
+        "score": 0.5838359116378758
+      },
+      {
+        "name": "CLIP-tiger-10 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.16696780855228632,
+        "score": 0.5834839042761432
+      },
+      {
+        "name": "CLIP-bicycle-05 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.16691220358543443,
+        "score": 0.5834561017927172
+      },
+      {
+        "name": "CLIP-car-03 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.16682406776243813,
+        "score": 0.5834120338812191
+      },
+      {
+        "name": "CLIP-car-02 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.16667217174491156,
+        "score": 0.5833360858724558
+      },
+      {
+        "name": "CLIP-tiger-05 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.16630249030118258,
+        "score": 0.5831512451505912
+      },
+      {
+        "name": "CLIP-tiger-09 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.1653165305254902,
+        "score": 0.5826582652627451
+      },
+      {
+        "name": "CLIP-elephant-07 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.16515133354540087,
+        "score": 0.5825756667727005
+      },
+      {
+        "name": "CLIP-tiger-04 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.16503878275168568,
+        "score": 0.5825193913758429
+      },
+      {
+        "name": "CLIP-horse-01 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.16443205443332962,
+        "score": 0.5822160272166648
+      },
+      {
+        "name": "CLIP-bird-08 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.16421130519445376,
+        "score": 0.5821056525972269
+      },
+      {
+        "name": "CLIP-bird-05 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.16400108058324114,
+        "score": 0.5820005402916206
+      },
+      {
+        "name": "CLIP-car-09 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.1639162289579257,
+        "score": 0.5819581144789628
+      },
+      {
+        "name": "CLIP-bicycle-07 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.16250664563138933,
+        "score": 0.5812533228156946
+      },
+      {
+        "name": "CLIP-horse-05 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.1623270227029736,
+        "score": 0.5811635113514868
+      },
+      {
+        "name": "CLIP-bird-02 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.16223038849870888,
+        "score": 0.5811151942493544
+      },
+      {
+        "name": "CLIP-horse-02 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.16203498564335794,
+        "score": 0.5810174928216789
+      },
+      {
+        "name": "CLIP-horse-08 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.16155373221180586,
+        "score": 0.580776866105903
+      },
+      {
+        "name": "CLIP-tiger-03 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.1613547861797557,
+        "score": 0.5806773930898779
+      },
+      {
+        "name": "CLIP-horse-04 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.16036334893152765,
+        "score": 0.5801816744657639
+      },
+      {
+        "name": "CLIP-bicycle-01 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.16025513205346167,
+        "score": 0.5801275660267309
+      },
+      {
+        "name": "CLIP-horse-03 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.16009124478761932,
+        "score": 0.5800456223938096
+      },
+      {
+        "name": "CLIP-bird-10 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.15968570598528056,
+        "score": 0.5798428529926403
+      },
+      {
+        "name": "CLIP-bicycle-10 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.15967852000285912,
+        "score": 0.5798392600014296
+      },
+      {
+        "name": "CLIP-elephant-01 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.1596689862993333,
+        "score": 0.5798344931496666
+      },
+      {
+        "name": "CLIP-bird-01 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.15961016986014548,
+        "score": 0.5798050849300728
+      },
+      {
+        "name": "CLIP-car-06 · Облачный ИИ: Автомобили",
+        "category": "car",
+        "cosine": 0.15939008837640156,
+        "score": 0.5796950441882007
+      },
+      {
+        "name": "CLIP-bird-04 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.15927035317726146,
+        "score": 0.5796351765886307
+      },
+      {
+        "name": "CLIP-dog-06 · Облачный ИИ: Собаки",
+        "category": "dog",
+        "cosine": 0.1586485202983951,
+        "score": 0.5793242601491976
+      },
+      {
+        "name": "CLIP-horse-09 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.15861446373334256,
+        "score": 0.5793072318666713
+      },
+      {
+        "name": "CLIP-elephant-10 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.15856042735192266,
+        "score": 0.5792802136759614
+      },
+      {
+        "name": "CLIP-elephant-02 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.15824338203740895,
+        "score": 0.5791216910187045
+      },
+      {
+        "name": "CLIP-elephant-05 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.15805143233755592,
+        "score": 0.579025716168778
+      },
+      {
+        "name": "CLIP-elephant-04 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.15757339528409084,
+        "score": 0.5787866976420454
+      },
+      {
+        "name": "CLIP-bird-09 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.15702656571324322,
+        "score": 0.5785132828566216
+      },
+      {
+        "name": "CLIP-elephant-03 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.1566862987832447,
+        "score": 0.5783431493916223
+      },
+      {
+        "name": "CLIP-bicycle-02 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.15635282385420102,
+        "score": 0.5781764119271005
+      },
+      {
+        "name": "CLIP-bicycle-08 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.15613682099629742,
+        "score": 0.5780684104981487
+      },
+      {
+        "name": "CLIP-tiger-06 · Облачный ИИ: Тигры",
+        "category": "tiger",
+        "cosine": 0.1556024180761563,
+        "score": 0.5778012090380782
+      },
+      {
+        "name": "CLIP-bicycle-04 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.15526315082003744,
+        "score": 0.5776315754100187
+      },
+      {
+        "name": "CLIP-bird-03 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.15472926984571145,
+        "score": 0.5773646349228557
+      },
+      {
+        "name": "CLIP-elephant-08 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.15422569968999836,
+        "score": 0.5771128498449992
+      },
+      {
+        "name": "CLIP-flower-07 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.15371937081169929,
+        "score": 0.5768596854058496
+      },
+      {
+        "name": "CLIP-bicycle-03 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.15337039533739083,
+        "score": 0.5766851976686954
+      },
+      {
+        "name": "CLIP-elephant-09 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.15309752409511285,
+        "score": 0.5765487620475565
+      },
+      {
+        "name": "CLIP-flower-01 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.1504530582190713,
+        "score": 0.5752265291095356
+      },
+      {
+        "name": "CLIP-bicycle-09 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.14999444383124552,
+        "score": 0.5749972219156227
+      },
+      {
+        "name": "CLIP-flower-05 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.14974932022661144,
+        "score": 0.5748746601133057
+      },
+      {
+        "name": "CLIP-bird-06 · Облачный ИИ: Птицы",
+        "category": "bird",
+        "cosine": 0.14823102578123654,
+        "score": 0.5741155128906182
+      },
+      {
+        "name": "CLIP-flower-02 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.1473661288567813,
+        "score": 0.5736830644283907
+      },
+      {
+        "name": "CLIP-flower-10 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.1460242710234188,
+        "score": 0.5730121355117094
+      },
+      {
+        "name": "CLIP-bicycle-06 · Облачный ИИ: Велосипеды",
+        "category": "bicycle",
+        "cosine": 0.14529676047431897,
+        "score": 0.5726483802371595
+      },
+      {
+        "name": "CLIP-cat-10 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.1452832943433546,
+        "score": 0.5726416471716773
+      },
+      {
+        "name": "CLIP-cat-07 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.1445481467517276,
+        "score": 0.5722740733758638
+      },
+      {
+        "name": "CLIP-cat-08 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.1443318147572259,
+        "score": 0.572165907378613
+      },
+      {
+        "name": "CLIP-horse-06 · Облачный ИИ: Лошади",
+        "category": "horse",
+        "cosine": 0.144146025679881,
+        "score": 0.5720730128399405
+      },
+      {
+        "name": "CLIP-cat-05 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.14412885611773543,
+        "score": 0.5720644280588677
+      },
+      {
+        "name": "CLIP-cat-02 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.14388725357154114,
+        "score": 0.5719436267857706
+      },
+      {
+        "name": "CLIP-cat-01 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.14382675670908032,
+        "score": 0.5719133783545401
+      },
+      {
+        "name": "CLIP-flower-03 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.14265991408658363,
+        "score": 0.5713299570432918
+      },
+      {
+        "name": "CLIP-elephant-06 · Облачный ИИ: Слоны",
+        "category": "elephant",
+        "cosine": 0.14242389661806915,
+        "score": 0.5712119483090345
+      },
+      {
+        "name": "CLIP-flower-09 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.14162131253833266,
+        "score": 0.5708106562691664
+      },
+      {
+        "name": "CLIP-cat-04 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.14157185157560287,
+        "score": 0.5707859257878014
+      },
+      {
+        "name": "CLIP-flower-08 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.13993600027335173,
+        "score": 0.5699680001366758
+      },
+      {
+        "name": "CLIP-flower-04 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.13974767258119652,
+        "score": 0.5698738362905983
+      },
+      {
+        "name": "CLIP-cat-09 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.13811120282722655,
+        "score": 0.5690556014136132
+      },
+      {
+        "name": "CLIP-cat-03 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.13389643017041625,
+        "score": 0.5669482150852081
+      },
+      {
+        "name": "CLIP-flower-06 · Облачный ИИ: Цветы",
+        "category": "flower",
+        "cosine": 0.13223902372614704,
+        "score": 0.5661195118630735
+      },
+      {
+        "name": "CLIP-cat-06 · Облачный ИИ: Кошки",
+        "category": "cat",
+        "cosine": 0.12575976068945965,
+        "score": 0.5628798803447298
+      }
+    ]
+  }
+}

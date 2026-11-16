@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Cloud Tariffs",
+  "version": "1.0.0",
+  "identifier": "ru.iu5.ivanov.cloudtariffs",
+  "build": {
+    "beforeDevCommand": "npm run native:dev",
+    "devUrl": "http://localhost:3001",
+    "beforeBuildCommand": "npm run native:build",
+    "frontendDist": "../dist-native"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "Cloud Tariffs",
+        "width": 1200,
+        "height": 850,
+        "minWidth": 400,
+        "minHeight": 600
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; worker-src 'self' blob:; connect-src 'self' ipc: http://ipc.localhost http://10.133.98.180:8080 blob:; font-src 'self' data:; object-src 'none'; base-uri 'self'"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": [
+      "rpm"
+    ],
+    "icon": [
+      "icons/icon.png"
+    ],
+    "category": "Utility",
+    "shortDescription": "Cloud tariff guest catalog with CLIP"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "identifier": "default",
+  "description": "Read the configured LAN API",
+  "windows": [
+    "main"
+  ],
+  "permissions": [
+    "core:default",
+    {
+      "identifier": "http:default",
+      "allow": [
+        {
+          "url": "http://10.133.98.180:8080/api/native/**"
+        }
+      ]
+    }
+  ]
+}

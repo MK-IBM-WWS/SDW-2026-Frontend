@@ -6,3 +6,9 @@ certs/
 .env.*
 !.env.proxy.example
 *.tsbuildinfo
+
+src-tauri/target/
+src-tauri/gen/
+dist-native/
+native-public/models/
+native-public/ort/
